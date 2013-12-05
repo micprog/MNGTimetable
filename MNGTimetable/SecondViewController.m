@@ -27,9 +27,11 @@
     [arrayClass addObject:@"3d"];
     [arrayClass addObject:@"3e"];
     */
-    arrayClass = [[NSArray arrayWithContentsOfFile:
-                                [[NSBundle mainBundle] pathForResource:@"Classes" ofType:@"plist"]] retain];
+    //arrayClass = [[NSArray arrayWithContentsOfFile:
+                                //[[NSBundle mainBundle] pathForResource:@"Classes" ofType:@"plist"]] retain];
     
+    //NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"MNGTimetable/Data/Classes" ofType:@"plist"];
+    arrayClass = [NSMutableArray arrayWithContentsOfFile:@"/Users/mikee/Dropbox/MNGTimetable/MNGTimetable/MNGTimetable/Classes.plist"];
     
 }
 
