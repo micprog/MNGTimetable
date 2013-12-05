@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C6636E11851135600B88E04 /* Lesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6636E01851135600B88E04 /* Lesson.m */; };
 		676F1DB61850BA8300480022 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676F1DB51850BA8300480022 /* Foundation.framework */; };
 		676F1DB81850BA8300480022 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676F1DB71850BA8300480022 /* CoreGraphics.framework */; };
 		676F1DBA1850BA8300480022 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676F1DB91850BA8300480022 /* UIKit.framework */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C6636DF1851135600B88E04 /* Lesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lesson.h; sourceTree = "<group>"; };
+		5C6636E01851135600B88E04 /* Lesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lesson.m; sourceTree = "<group>"; };
 		676F1DB21850BA8300480022 /* MNGTimetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNGTimetable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		676F1DB51850BA8300480022 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		676F1DB71850BA8300480022 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -146,6 +149,8 @@
 				676F1DD31850BA8300480022 /* Images.xcassets */,
 				676F1DF01850C2B500480022 /* Calendar */,
 				676F1DBC1850BA8300480022 /* Supporting Files */,
+				5C6636DF1851135600B88E04 /* Lesson.h */,
+				5C6636E01851135600B88E04 /* Lesson.m */,
 			);
 			path = MNGTimetable;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				676F1E0C1850C2B500480022 /* UIView+convenience.m in Sources */,
 				676F1DC61850BA8300480022 /* AppDelegate.m in Sources */,
 				676F1DCF1850BA8300480022 /* FirstViewController.m in Sources */,
+				5C6636E11851135600B88E04 /* Lesson.m in Sources */,
 				676F1E0B1850C2B500480022 /* UIColor+expanded.m in Sources */,
 				676F1DC21850BA8300480022 /* main.m in Sources */,
 			);
@@ -532,6 +538,7 @@
 				676F1DEC1850BA8400480022 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		676F1DED1850BA8400480022 /* Build configuration list for PBXNativeTarget "MNGTimetableTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +547,7 @@
 				676F1DEF1850BA8400480022 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
