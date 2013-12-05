@@ -2,4 +2,4 @@ MNGTimetable
 ============
 
 
-Timetable App for MNG Rämibühl.
+Timetable App for MNG Rämibühl in Zürich.
