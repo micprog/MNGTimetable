@@ -23,6 +23,12 @@
 		676F1DDD1850BA8400480022 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676F1DB91850BA8300480022 /* UIKit.framework */; };
 		676F1DE51850BA8400480022 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 676F1DE31850BA8400480022 /* InfoPlist.strings */; };
 		676F1DE71850BA8400480022 /* MNGTimetableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DE61850BA8400480022 /* MNGTimetableTests.m */; };
+		676F1E091850C2B500480022 /* NSDate+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DF71850C2B500480022 /* NSDate+convenience.m */; };
+		676F1E0A1850C2B500480022 /* NSMutableArray+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DF91850C2B500480022 /* NSMutableArray+convenience.m */; };
+		676F1E0B1850C2B500480022 /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DFB1850C2B500480022 /* UIColor+expanded.m */; };
+		676F1E0C1850C2B500480022 /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DFD1850C2B500480022 /* UIView+convenience.m */; };
+		676F1E0E1850C2B500480022 /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1E011850C2B500480022 /* VRGCalendarView.m */; };
+		676F1E771851045600480022 /* Classes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 676F1E761851045600480022 /* Classes.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,17 @@
 		676F1DE21850BA8400480022 /* MNGTimetableTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MNGTimetableTests-Info.plist"; sourceTree = "<group>"; };
 		676F1DE41850BA8400480022 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		676F1DE61850BA8400480022 /* MNGTimetableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNGTimetableTests.m; sourceTree = "<group>"; };
+		676F1DF61850C2B500480022 /* NSDate+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+convenience.h"; sourceTree = "<group>"; };
+		676F1DF71850C2B500480022 /* NSDate+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+convenience.m"; sourceTree = "<group>"; };
+		676F1DF81850C2B500480022 /* NSMutableArray+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+convenience.h"; sourceTree = "<group>"; };
+		676F1DF91850C2B500480022 /* NSMutableArray+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+convenience.m"; sourceTree = "<group>"; };
+		676F1DFA1850C2B500480022 /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+expanded.h"; sourceTree = "<group>"; };
+		676F1DFB1850C2B500480022 /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
+		676F1DFC1850C2B500480022 /* UIView+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+convenience.h"; sourceTree = "<group>"; };
+		676F1DFD1850C2B500480022 /* UIView+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+convenience.m"; sourceTree = "<group>"; };
+		676F1E001850C2B500480022 /* VRGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGCalendarView.h; sourceTree = "<group>"; };
+		676F1E011850C2B500480022 /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGCalendarView.m; sourceTree = "<group>"; };
+		676F1E761851045600480022 /* Classes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Classes.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +134,7 @@
 		676F1DBB1850BA8300480022 /* MNGTimetable */ = {
 			isa = PBXGroup;
 			children = (
+				676F1E73185103C100480022 /* Data */,
 				676F1DC41850BA8300480022 /* AppDelegate.h */,
 				676F1DC51850BA8300480022 /* AppDelegate.m */,
 				676F1DC71850BA8300480022 /* Main_iPhone.storyboard */,
@@ -126,6 +144,7 @@
 				676F1DD01850BA8300480022 /* SecondViewController.h */,
 				676F1DD11850BA8300480022 /* SecondViewController.m */,
 				676F1DD31850BA8300480022 /* Images.xcassets */,
+				676F1DF01850C2B500480022 /* Calendar */,
 				676F1DBC1850BA8300480022 /* Supporting Files */,
 			);
 			path = MNGTimetable;
@@ -158,6 +177,31 @@
 				676F1DE31850BA8400480022 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		676F1DF01850C2B500480022 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				676F1DF61850C2B500480022 /* NSDate+convenience.h */,
+				676F1DF71850C2B500480022 /* NSDate+convenience.m */,
+				676F1DF81850C2B500480022 /* NSMutableArray+convenience.h */,
+				676F1DF91850C2B500480022 /* NSMutableArray+convenience.m */,
+				676F1DFA1850C2B500480022 /* UIColor+expanded.h */,
+				676F1DFB1850C2B500480022 /* UIColor+expanded.m */,
+				676F1DFC1850C2B500480022 /* UIView+convenience.h */,
+				676F1DFD1850C2B500480022 /* UIView+convenience.m */,
+				676F1E001850C2B500480022 /* VRGCalendarView.h */,
+				676F1E011850C2B500480022 /* VRGCalendarView.m */,
+			);
+			path = Calendar;
+			sourceTree = SOURCE_ROOT;
+		};
+		676F1E73185103C100480022 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				676F1E761851045600480022 /* Classes.plist */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +283,7 @@
 				676F1DCC1850BA8300480022 /* Main_iPad.storyboard in Resources */,
 				676F1DD41850BA8300480022 /* Images.xcassets in Resources */,
 				676F1DC91850BA8300480022 /* Main_iPhone.storyboard in Resources */,
+				676F1E771851045600480022 /* Classes.plist in Resources */,
 				676F1DC01850BA8300480022 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +303,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				676F1E0E1850C2B500480022 /* VRGCalendarView.m in Sources */,
+				676F1E0A1850C2B500480022 /* NSMutableArray+convenience.m in Sources */,
 				676F1DD21850BA8300480022 /* SecondViewController.m in Sources */,
+				676F1E091850C2B500480022 /* NSDate+convenience.m in Sources */,
+				676F1E0C1850C2B500480022 /* UIView+convenience.m in Sources */,
 				676F1DC61850BA8300480022 /* AppDelegate.m in Sources */,
 				676F1DCF1850BA8300480022 /* FirstViewController.m in Sources */,
+				676F1E0B1850C2B500480022 /* UIColor+expanded.m in Sources */,
 				676F1DC21850BA8300480022 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MNGTimetable/MNGTimetable-Prefix.pch";
 				INFOPLIST_FILE = "MNGTimetable/MNGTimetable-Info.plist";
@@ -411,6 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MNGTimetable/MNGTimetable-Prefix.pch";
 				INFOPLIST_FILE = "MNGTimetable/MNGTimetable-Info.plist";

@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#define CLASS 0
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : UIViewController <NSStreamDelegate,UIPickerViewDataSource,UIPickerViewDelegate> {
+    
+    NSMutableArray *arrayClass;
+    
+    
+}
 
+@property (retain, nonatomic) IBOutlet UIPickerView *ClassPicker;
 @end

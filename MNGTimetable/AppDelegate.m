@@ -10,6 +10,16 @@
 
 @implementation AppDelegate
 
+int *lessonCount = 0;
+
+- (void)dealloc {
+    
+    [_window release];
+    [_viewController release];
+    [super dealloc];
+    
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.

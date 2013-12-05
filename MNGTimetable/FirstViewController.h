@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VRGCalendarView.h"
 
-@interface FirstViewController : UIViewController
+
+@interface FirstViewController : UIViewController <VRGCalendarViewDelegate> {
+    
+    
+    
+}
+
+extern int *lessonCount;
 
 @end
