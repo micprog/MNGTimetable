@@ -12,9 +12,15 @@
 @interface SecondViewController : UIViewController <NSStreamDelegate,UIPickerViewDataSource,UIPickerViewDelegate> {
     
     NSMutableArray *arrayClass;
-    
+    NSMutableArray *arrayClassUsable;
+    NSString *ClassesPath;
     
 }
 
-@property (retain, nonatomic) IBOutlet UIPickerView *ClassPicker;
+@property (strong, nonatomic) IBOutlet UIPickerView *ClassPicker;
+
+    
+    
+
+
 @end

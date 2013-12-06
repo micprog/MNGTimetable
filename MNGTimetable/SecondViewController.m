@@ -14,13 +14,21 @@
 
 @implementation SecondViewController
 
+
+- (NSString *)docsDir {
+    
+    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0];
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    /*
-    arrayClass = [[NSMutableArray alloc]init];
     
+    arrayClass = [[[NSMutableArray alloc]init]retain];
+    arrayClassUsable = [[NSMutableArray alloc]init];
+    /*
     [arrayClass addObject:@"3a"];
     [arrayClass addObject:@"3b"];
     [arrayClass addObject:@"3c"];
@@ -31,9 +39,27 @@
                                 //[[NSBundle mainBundle] pathForResource:@"Classes" ofType:@"plist"]] retain];
     
     //NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"MNGTimetable/Data/Classes" ofType:@"plist"];
-    arrayClass = [NSMutableArray arrayWithContentsOfFile:@"/Users/mikee/Dropbox/MNGTimetable/MNGTimetable/MNGTimetable/Classes.plist"];
+    
+    ClassesPath = [[self docsDir]stringByAppendingPathComponent:@"Classes.plist"];
+    
+    if (![[NSFileManager defaultManager]fileExistsAtPath:ClassesPath]) {
+        [[NSFileManager defaultManager]copyItemAtPath:[[NSBundle mainBundle]pathForResource:@"Classes" ofType:@"plist"] toPath:ClassesPath error:nil];
+    }
+    
+    arrayClass = [NSArray arrayWithContentsOfFile:ClassesPath];
+    
+    NSLog(@"Count: %i", [arrayClass count]);
+    
+    for (int i=0; i<[arrayClass count]; i++) {
+        [arrayClassUsable addObject:[arrayClass objectAtIndex:i]];
+    }
+    
+    [_ClassPicker selectRow:1 inComponent:0 animated:NO];
+    
     
 }
+
+
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     
@@ -44,7 +70,7 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     
     if (component == CLASS)
-        return [arrayClass count]-1;
+        return [arrayClassUsable count];
     
     return 0;
     
@@ -52,9 +78,15 @@
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     
-    if (component == CLASS)
-        return [arrayClass objectAtIndex:row];
+    if (component == CLASS) {
+        return [arrayClassUsable objectAtIndexedSubscript:row];
+    }
     return 0;
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    
+    //place where a the value from the picker view can be used.
     
 }
 
@@ -65,7 +97,12 @@
 }
 
 - (void)dealloc {
+    //self.arrayClass.delegate = nil;
+    //self.ClassPicker.delegate = nil;
     [_ClassPicker release];
+    
+    //[arrayClass release];
+    
     [super dealloc];
 }
 @end
