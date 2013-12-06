@@ -1,0 +1,247 @@
+{
+	"name": "3a",
+	"base": true,
+	"table": [
+		[
+			{
+				"isNil": true,
+				"teacher": "",
+				"room": "",
+				"subject": "",
+				"isHalfclass": false
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			}
+		],
+		[
+			{
+				"isNil": false,
+				"teacher": "Gerhard Toggenburger",
+				"room": "c412",
+				"subject": "Chemistry",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			}
+		],
+		[
+			{
+				"isNil": false,
+				"teacher": "Christoph Frei",
+				"room": "m417",
+				"subject": "German",
+				"isHalfclass": false
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			}
+		],
+		[
+			{
+				"isNil": false,
+				"teacher": "Stefan Bachmann",
+				"room": "b323",
+				"subject": "Biology",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			}
+		],
+		[
+			{
+				"isNil": false,
+				"teacher": "Stefan Bachmann",
+				"room": "b323",
+				"subject": "Biology",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			},
+			{
+				"isNil": false,
+				"teacher": "Gregor Schäppi",
+				"room": "m522",
+				"subject": "Mathematics",
+				"isHalfclass": true
+			}
+		]
+	]
+}

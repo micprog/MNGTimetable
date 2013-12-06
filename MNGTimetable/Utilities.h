@@ -11,5 +11,5 @@
 @interface Utilities : NSObject
 
 + (void) updateDataFiles;
-
++ (NSArray *) fetchBaseTimetable:(NSString*) name ;
 @end

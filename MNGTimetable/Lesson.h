@@ -11,11 +11,14 @@
 
 @interface Lesson : NSObject
 
-@property (copy) NSString *Name;
-@property (copy) NSString *Type;
-@property (copy) NSString *StartTime; //Just a string
-@property (copy) NSString *EndTime;   //Not a date
-@property (copy) NSString *Teacher;
-@property (copy) NSString *Room;
+@property (copy) NSString *name;
+@property (copy) NSString *type;
+@property (copy) NSString *startTime; //Just a string
+@property (copy) NSString *endTime;   //Not a date
+@property (copy) NSString *teacher;
+@property (copy) NSString *room;
+@property (copy) NSString *subject;
 
+
+- (id)init;
 @end

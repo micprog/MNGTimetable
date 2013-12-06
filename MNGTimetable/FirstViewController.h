@@ -16,6 +16,5 @@
     
 }
 
-extern int *lessonCount;
 
 @end

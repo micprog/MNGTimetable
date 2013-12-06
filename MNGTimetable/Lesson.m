@@ -10,4 +10,22 @@
 
 @implementation Lesson
 
+@synthesize name, endTime, room, startTime, teacher, type, subject;
+
+- (id)init {
+    if ( self = [super init] ) {
+        subject = @"";
+        teacher = @"";
+        type = @"";
+        name = @"";
+        startTime = @"";
+        endTime = @"";
+        room = @"";
+        
+        return self;
+    } else {
+        return nil;
+    }
+}
+
 @end

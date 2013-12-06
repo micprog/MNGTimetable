@@ -167,9 +167,9 @@
 				676F1DF01850C2B500480022 /* Calendar */,
 				676F1DBC1850BA8300480022 /* Supporting Files */,
 				5C6636DF1851135600B88E04 /* Lesson.h */,
+				5C6636E01851135600B88E04 /* Lesson.m */,
 				5C6636E21851323E00B88E04 /* Utilities.h */,
 				5C6636E31851323E00B88E04 /* Utilities.m */,
-				5C6636E01851135600B88E04 /* Lesson.m */,
 			);
 			path = MNGTimetable;
 			sourceTree = "<group>";

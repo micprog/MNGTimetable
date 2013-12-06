@@ -13,8 +13,8 @@
 #define kVRGCalendarViewTopBarHeight 60
 #define kVRGCalendarViewWidth 320
 
-#define kVRGCalendarViewDayWidth 44
-#define kVRGCalendarViewDayHeight 44
+#define kVRGCalendarViewDayWidth 46
+#define kVRGCalendarViewDayHeight 46
 
 @protocol VRGCalendarViewDelegate;
 @interface VRGCalendarView : UIView {
@@ -33,6 +33,7 @@
     
     NSArray *markedDates;
     NSArray *markedColors;
+    
 }
 
 @property (nonatomic, retain) id <VRGCalendarViewDelegate> delegate;
@@ -45,6 +46,8 @@
 @property (nonatomic, getter = calendarHeight) float calendarHeight;
 @property (nonatomic, retain, getter = selectedDate) NSDate *selectedDate;
 @property (nonatomic, retain) NSArray *timetable;
+@property (nonatomic, assign) int lessonCount;
+@property (nonatomic, assign) NSArray *colors;
 
 -(void)selectDate:(int)date;
 -(void)reset;
