@@ -44,6 +44,7 @@
 @property (nonatomic, retain) NSArray *markedColors;
 @property (nonatomic, getter = calendarHeight) float calendarHeight;
 @property (nonatomic, retain, getter = selectedDate) NSDate *selectedDate;
+@property (nonatomic, retain) NSArray *timetable;
 
 -(void)selectDate:(int)date;
 -(void)reset;

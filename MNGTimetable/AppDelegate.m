@@ -10,7 +10,7 @@
 
 @implementation AppDelegate
 
-int *lessonCount = 0;
+int *lessonCount = 9;
 
 - (void)dealloc {
     

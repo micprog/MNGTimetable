@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C6532D41851C48E00FEFEE5 /* appbar.calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6532D31851C48E00FEFEE5 /* appbar.calendar.png */; };
+		5C6532D61851CC1900FEFEE5 /* appbar.cog.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6532D51851CC1900FEFEE5 /* appbar.cog.png */; };
 		5C6636E11851135600B88E04 /* Lesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6636E01851135600B88E04 /* Lesson.m */; };
+		5C6636E41851323E00B88E04 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6636E31851323E00B88E04 /* Utilities.m */; };
 		676F1DB61850BA8300480022 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676F1DB51850BA8300480022 /* Foundation.framework */; };
 		676F1DB81850BA8300480022 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676F1DB71850BA8300480022 /* CoreGraphics.framework */; };
 		676F1DBA1850BA8300480022 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676F1DB91850BA8300480022 /* UIKit.framework */; };
@@ -43,8 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C6532D31851C48E00FEFEE5 /* appbar.calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appbar.calendar.png; sourceTree = "<group>"; };
+		5C6532D51851CC1900FEFEE5 /* appbar.cog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appbar.cog.png; sourceTree = "<group>"; };
 		5C6636DF1851135600B88E04 /* Lesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lesson.h; sourceTree = "<group>"; };
 		5C6636E01851135600B88E04 /* Lesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lesson.m; sourceTree = "<group>"; };
+		5C6636E21851323E00B88E04 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		5C6636E31851323E00B88E04 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 		676F1DB21850BA8300480022 /* MNGTimetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNGTimetable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		676F1DB51850BA8300480022 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		676F1DB71850BA8300480022 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -104,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C6532D21851C48E00FEFEE5 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				5C6532D51851CC1900FEFEE5 /* appbar.cog.png */,
+				5C6532D31851C48E00FEFEE5 /* appbar.calendar.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
 		676F1DA91850BA8200480022 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +157,7 @@
 				676F1DC41850BA8300480022 /* AppDelegate.h */,
 				676F1DC51850BA8300480022 /* AppDelegate.m */,
 				676F1DC71850BA8300480022 /* Main_iPhone.storyboard */,
+				5C6532D21851C48E00FEFEE5 /* Icons */,
 				676F1DCA1850BA8300480022 /* Main_iPad.storyboard */,
 				676F1DCD1850BA8300480022 /* FirstViewController.h */,
 				676F1DCE1850BA8300480022 /* FirstViewController.m */,
@@ -150,6 +167,8 @@
 				676F1DF01850C2B500480022 /* Calendar */,
 				676F1DBC1850BA8300480022 /* Supporting Files */,
 				5C6636DF1851135600B88E04 /* Lesson.h */,
+				5C6636E21851323E00B88E04 /* Utilities.h */,
+				5C6636E31851323E00B88E04 /* Utilities.m */,
 				5C6636E01851135600B88E04 /* Lesson.m */,
 			);
 			path = MNGTimetable;
@@ -285,10 +304,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C6532D61851CC1900FEFEE5 /* appbar.cog.png in Resources */,
 				676F1DCC1850BA8300480022 /* Main_iPad.storyboard in Resources */,
 				676F1DD41850BA8300480022 /* Images.xcassets in Resources */,
 				676F1DC91850BA8300480022 /* Main_iPhone.storyboard in Resources */,
 				676F1E771851045600480022 /* Classes.plist in Resources */,
+				5C6532D41851C48E00FEFEE5 /* appbar.calendar.png in Resources */,
 				676F1DC01850BA8300480022 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +335,7 @@
 				676F1E091850C2B500480022 /* NSDate+convenience.m in Sources */,
 				676F1E0C1850C2B500480022 /* UIView+convenience.m in Sources */,
 				676F1DC61850BA8300480022 /* AppDelegate.m in Sources */,
+				5C6636E41851323E00B88E04 /* Utilities.m in Sources */,
 				676F1DCF1850BA8300480022 /* FirstViewController.m in Sources */,
 				5C6636E11851135600B88E04 /* Lesson.m in Sources */,
 				676F1E0B1850C2B500480022 /* UIColor+expanded.m in Sources */,

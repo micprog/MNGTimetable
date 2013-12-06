@@ -15,7 +15,7 @@
 
 @implementation VRGCalendarView
 @synthesize currentMonth,delegate,labelCurrentMonth, animationView_A,animationView_B;
-@synthesize markedDates,markedColors,calendarHeight,selectedDate;
+@synthesize markedDates,markedColors,calendarHeight,selectedDate, timetable;
 
 #pragma mark - Select Date
 -(void)selectDate:(int)date {
@@ -341,7 +341,7 @@
     CGRect rectangleGrid = CGRectMake(0,kVRGCalendarViewTopBarHeight,self.frame.size.width,gridHeight);
     CGContextAddRect(context, rectangleGrid);
     // Yeaaaah look here this is the color we wanna edit!!!!!!!!!!!
-    CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:@"0xf3f3f300"].CGColor);
+    CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:@"0xFEFEFE"].CGColor);
     //CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:@"0xff0000"].CGColor);
     CGContextFillPath(context);
     
@@ -363,7 +363,7 @@
     CGContextStrokePath(context);
     
     //Grid dark lines
-    CGContextSetStrokeColorWithColor(context, [UIColor colorWithHexString:@"0xcfd4d8"].CGColor);
+    CGContextSetStrokeColorWithColor(context, [UIColor colorWithHexString:@"0xffffff"].CGColor);
     CGContextBeginPath(context);
     CGContextMoveToPoint(context, 0, kVRGCalendarViewTopBarHeight);
     CGContextAddLineToPoint(context, kVRGCalendarViewWidth, kVRGCalendarViewTopBarHeight);
@@ -460,7 +460,9 @@
         
         //draw selected date
         if (selectedDate && i==selectedDateBlock) {
+            
             CGRect rectangleGrid = CGRectMake(targetX,targetY,kVRGCalendarViewDayWidth+2,kVRGCalendarViewDayHeight+2);
+           
             CGContextAddRect(context, rectangleGrid);
             CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:@"0x006dbc"].CGColor);
             CGContextFillPath(context);
@@ -481,7 +483,15 @@
     }
     
     //    CGContextClosePath(context);
+    /*
     
+    //Draw lesson dots
+    if (self.timetable) {
+        for (int i=0; i<[self.timetable count]; i++) {
+            
+        }
+    }
+    */
     
     //Draw markings
     if (!self.markedDates || isSelectedDatePreviousMonth || isSelectedDateNextMonth) return;
@@ -519,18 +529,40 @@
         int blockWidth = 40;
         int dotWidth = 3;
         int dotPadding = 3;
+        UIColor *dotColor = [UIColor colorWithHexString:@"0x383838"];
         
         int transFirstRow = (blockWidth-(dotWidth+dotPadding)*firstRowCount)/2;
         int transSecondRow = (blockWidth-(dotWidth+dotPadding)*secondRowCount)/2;
         
         for (int i = 0; i<firstRowCount; i++) {
-            CGRect rect = CGRectMake(transFirstRow+targetX-blockWidth/2+i*(dotWidth+dotPadding)+dotPadding, targetY, dotWidth, dotWidth);
+            CGRect rect = CGRectMake(transFirstRow+targetX-blockWidth/2+i*(dotWidth+dotPadding)+dotPadding/2, targetY, dotWidth, dotWidth);
+            [[UIBezierPath bezierPathWithRoundedRect:rectangleGrid cornerRadius:4] addClip];
             CGContextAddRect(context, rect);
+            
+            if ((selectedDate && selectedDateBlock==targetBlock) || todayBlock==targetBlock) {
+                CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
+                
+            } else {
+                CGContextSetFillColorWithColor(context, dotColor.CGColor);
+            }
+            CGContextFillPath(context);
+            
         }
         
         for (int n = 0; n<secondRowCount; n++) {
-            CGRect rect2 = CGRectMake(transSecondRow+targetX-blockWidth/2+n*(dotWidth+dotPadding)+dotPadding, targetY+(dotWidth+dotPadding), dotWidth, dotWidth);
+            CGRect rect2 = CGRectMake(transSecondRow+targetX-blockWidth/2+n*(dotWidth+dotPadding)+dotPadding/2, targetY+(dotWidth+dotPadding), dotWidth, dotWidth);
+            [[UIBezierPath bezierPathWithRoundedRect:rectangleGrid cornerRadius:4] addClip];
             CGContextAddRect(context, rect2);
+            
+            if ((selectedDate && selectedDateBlock==targetBlock) || todayBlock==targetBlock) {
+                CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
+                
+            } else {
+                CGContextSetFillColorWithColor(context, dotColor.CGColor);
+                
+            }
+            
+            CGContextFillPath(context);
         }
         
         /*
@@ -550,6 +582,7 @@
         CGContextFillPath(context);
     }
 }
+
 
 #pragma mark - Draw image for animation
 -(UIImage *)drawCurrentState {

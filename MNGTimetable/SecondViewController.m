@@ -44,7 +44,7 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     
     if (component == CLASS)
-        return [arrayClass count];
+        return [arrayClass count]-1;
     
     return 0;
     

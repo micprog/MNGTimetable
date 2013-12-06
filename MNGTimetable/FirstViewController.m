@@ -29,7 +29,7 @@
 
 -(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated {
     if (month==[[NSDate date] month]) {
-        NSArray *dates = [NSArray arrayWithObjects:[NSNumber numberWithInt:3],[NSNumber numberWithInt:23], nil];
+        NSArray *dates = [NSArray arrayWithObjects:[NSNumber numberWithInt:6],[NSNumber numberWithInt:23], nil];
         [calendarView markDates:dates];
     }
     
