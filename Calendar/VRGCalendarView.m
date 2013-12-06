@@ -513,52 +513,6 @@
                 CGContextFillPath(context);
             }
         }
-        
-    
-    }
-    
-    //    CGContextClosePath(context);
-    
-    
-    //Draw markings
-    
-    for (int i = 0; i<[self.markedDates count]; i++) {
-        id markedDateObj = [self.markedDates objectAtIndex:i];
-        
-        int targetDate;
-        if ([markedDateObj isKindOfClass:[NSNumber class]]) {
-            targetDate = [(NSNumber *)markedDateObj intValue];
-        } else if ([markedDateObj isKindOfClass:[NSDate class]]) {
-            NSDate *date = (NSDate *)markedDateObj;
-            targetDate = [date day];
-        } else {
-            continue;
-        }
-        
-        int targetBlock = firstWeekDay + (targetDate-1);
-        int targetColumn = targetBlock%7;
-        int targetRow = targetBlock/7;
-        
-        int targetX = targetColumn * (kVRGCalendarViewDayWidth) + 23;
-        int targetY = kVRGCalendarViewTopBarHeight + targetRow * (kVRGCalendarViewDayHeight) + 32;
-        
-
-        
-        /*
-        CGRect rectangle = CGRectMake(targetX,targetY,4,4);
-        CGContextAddRect(context, rectangle);*/
-        UIColor *color;
-        if (selectedDate && selectedDateBlock==targetBlock) {
-            color = [UIColor whiteColor];
-        }  else if (todayBlock==targetBlock) {
-            color = [UIColor whiteColor];
-        } else {
-            color  = (UIColor *)[markedColors objectAtIndex:i];
-        }
-        
-        
-        CGContextSetFillColorWithColor(context, color.CGColor);
-        CGContextFillPath(context);
     }
 }
 
