@@ -3,7 +3,7 @@
 //  MNGTimetable
 //
 //  Created by Áedán Christie on 05/12/13.
-//  Copyright (c) 2013 Michael Rogenmoser. All rights reserved.
+//  Copyright (c) 2013 Áedán Christie. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -12,4 +12,5 @@
 
 + (void) updateDataFiles;
 + (NSArray *) fetchBaseTimetable:(NSString*) name ;
++ (void)saveImage: (UIImage*)image;
 @end

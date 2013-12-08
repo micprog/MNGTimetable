@@ -12,6 +12,7 @@
 #import "NSMutableArray+convenience.h"
 #import "UIView+convenience.h"
 #import "FirstViewController.h"
+#import "Utilities.h"
 
 @implementation VRGCalendarView
 
@@ -99,7 +100,7 @@
     //Old month
     float oldSize = self.calendarHeight;
     UIImage *imageCurrentMonth = [self drawCurrentState];
-    
+    [Utilities saveImage:imageCurrentMonth];
     //New month
     self.currentMonth = [currentMonth offsetMonth:1];
     if ([delegate respondsToSelector:@selector(calendarView:switchedToMonth:targetHeight: animated:)]) [delegate calendarView:self switchedToMonth:[currentMonth month] targetHeight:self.calendarHeight animated:YES];
@@ -118,7 +119,6 @@
     self.animationView_B = [[UIImageView alloc] initWithImage:imageNextMonth];
     [animationHolder addSubview:animationView_A];
     [animationHolder addSubview:animationView_B];
-    
     if (hasNextMonthDays) {
         animationView_B.frameY = animationView_A.frameY + animationView_A.frameHeight - (kVRGCalendarViewDayHeight+3);
     } else {
@@ -127,10 +127,11 @@
     
     //Animation
     __block VRGCalendarView *blockSafeSelf = self;
-    [UIView animateWithDuration:.35
+    [UIView animateWithDuration:0.2
                      animations:^{
                          [self updateSize];
                          //blockSafeSelf.frameHeight = 100;
+                         
                          if (hasNextMonthDays) {
                              animationView_A.frameY = -animationView_A.frameHeight + kVRGCalendarViewDayHeight+3;
                          } else {
@@ -147,6 +148,8 @@
                          [animationHolder removeFromSuperview];
                      }
      ];
+    
+    
 }
 
 -(void)showPreviousMonth {
@@ -186,7 +189,7 @@
     }
     
     __block VRGCalendarView *blockSafeSelf = self;
-    [UIView animateWithDuration:.35
+    [UIView animateWithDuration:.2
                      animations:^{
                          [self updateSize];
                          
@@ -338,11 +341,11 @@
     CGContextSetAllowsAntialiasing(context, NO);
     
     //Grid background
-    float gridHeight = numRows*(kVRGCalendarViewDayHeight)+1;
+    float gridHeight = numRows*(kVRGCalendarViewDayHeight);
     CGRect rectangleGrid = CGRectMake(0,kVRGCalendarViewTopBarHeight,self.frame.size.width,gridHeight);
     CGContextAddRect(context, rectangleGrid);
     // Yeaaaah look here this is the color we wanna edit!!!!!!!!!!!
-    CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:@"0xFEFEFE"].CGColor);
+    CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:@"0xFFFFFF"].CGColor);
     //CGContextSetFillColorWithColor(context, [UIColor colorWithHexString:@"0xff0000"].CGColor);
     CGContextFillPath(context);
 
@@ -457,7 +460,7 @@
         
         if (isSelectedDatePreviousMonth || isSelectedDateNextMonth) return;
         
-        if (targetColumn < 5) {
+        if (targetColumn < 5 && self.timetable) {
             lessonCount = [timetable[targetColumn] count];
             int firstRowCount = lessonCount;
             int secondRowCount = 0;
@@ -516,50 +519,7 @@
         
     
     }
-    
-    //    CGContextClosePath(context);
-    
-    
-    //Draw markings
-    
-    for (int i = 0; i<[self.markedDates count]; i++) {
-        id markedDateObj = [self.markedDates objectAtIndex:i];
-        
-        int targetDate;
-        if ([markedDateObj isKindOfClass:[NSNumber class]]) {
-            targetDate = [(NSNumber *)markedDateObj intValue];
-        } else if ([markedDateObj isKindOfClass:[NSDate class]]) {
-            NSDate *date = (NSDate *)markedDateObj;
-            targetDate = [date day];
-        } else {
-            continue;
-        }
-        
-        int targetBlock = firstWeekDay + (targetDate-1);
-        int targetColumn = targetBlock%7;
-        int targetRow = targetBlock/7;
-        
-        int targetX = targetColumn * (kVRGCalendarViewDayWidth) + 23;
-        int targetY = kVRGCalendarViewTopBarHeight + targetRow * (kVRGCalendarViewDayHeight) + 32;
-        
 
-        
-        /*
-        CGRect rectangle = CGRectMake(targetX,targetY,4,4);
-        CGContextAddRect(context, rectangle);*/
-        UIColor *color;
-        if (selectedDate && selectedDateBlock==targetBlock) {
-            color = [UIColor whiteColor];
-        }  else if (todayBlock==targetBlock) {
-            color = [UIColor whiteColor];
-        } else {
-            color  = (UIColor *)[markedColors objectAtIndex:i];
-        }
-        
-        
-        CGContextSetFillColorWithColor(context, color.CGColor);
-        CGContextFillPath(context);
-    }
 }
 
 #pragma mark - Draw image for animation
