@@ -32,7 +32,6 @@
 		676F1E0C1850C2B500480022 /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DFD1850C2B500480022 /* UIView+convenience.m */; };
 		676F1E0E1850C2B500480022 /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1E011850C2B500480022 /* VRGCalendarView.m */; };
 		676F1E771851045600480022 /* Classes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 676F1E761851045600480022 /* Classes.plist */; };
-		67DD73AC1859EAC0007BC7F0 /* Wishlist.md in Resources */ = {isa = PBXBuildFile; fileRef = 67DD73AB1859EAC0007BC7F0 /* Wishlist.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +83,6 @@
 		676F1E001850C2B500480022 /* VRGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGCalendarView.h; sourceTree = "<group>"; };
 		676F1E011850C2B500480022 /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGCalendarView.m; sourceTree = "<group>"; };
 		676F1E761851045600480022 /* Classes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Classes.plist; sourceTree = "<group>"; };
-		67DD73AB1859EAC0007BC7F0 /* Wishlist.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Wishlist.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,10 +152,10 @@
 			isa = PBXGroup;
 			children = (
 				676F1E73185103C100480022 /* Data */,
-				5C6532D21851C48E00FEFEE5 /* Icons */,
 				676F1DC41850BA8300480022 /* AppDelegate.h */,
 				676F1DC51850BA8300480022 /* AppDelegate.m */,
 				676F1DC71850BA8300480022 /* Main_iPhone.storyboard */,
+				5C6532D21851C48E00FEFEE5 /* Icons */,
 				676F1DCD1850BA8300480022 /* FirstViewController.h */,
 				676F1DCE1850BA8300480022 /* FirstViewController.m */,
 				676F1DD01850BA8300480022 /* SecondViewController.h */,
@@ -169,7 +167,6 @@
 				5C6636E01851135600B88E04 /* Lesson.m */,
 				5C6636E21851323E00B88E04 /* Utilities.h */,
 				5C6636E31851323E00B88E04 /* Utilities.m */,
-				67DD73AB1859EAC0007BC7F0 /* Wishlist.md */,
 			);
 			path = MNGTimetable;
 			sourceTree = "<group>";
@@ -308,7 +305,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C6532D61851CC1900FEFEE5 /* appbar.cog.png in Resources */,
-				67DD73AC1859EAC0007BC7F0 /* Wishlist.md in Resources */,
 				676F1DD41850BA8300480022 /* Images.xcassets in Resources */,
 				676F1DC91850BA8300480022 /* Main_iPhone.storyboard in Resources */,
 				676F1E771851045600480022 /* Classes.plist in Resources */,
@@ -479,10 +475,7 @@
 				INFOPLIST_FILE = "MNGTimetable/MNGTimetable-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-<<<<<<< HEAD
-=======
 				TARGETED_DEVICE_FAMILY = 1;
->>>>>>> 31ed3428a8cbce9b1158404eec8ddbd87d658696
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -500,10 +493,7 @@
 				INFOPLIST_FILE = "MNGTimetable/MNGTimetable-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-<<<<<<< HEAD
-=======
 				TARGETED_DEVICE_FAMILY = 1;
->>>>>>> 31ed3428a8cbce9b1158404eec8ddbd87d658696
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
