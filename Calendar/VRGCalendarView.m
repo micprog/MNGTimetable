@@ -190,7 +190,9 @@
 
 #pragma mark - update size & row count
 -(void)updateSize {
+    [delegate calendarView:self heightAboutToChange:self.calendarHeight];
     self.frameHeight = self.calendarHeight;
+    //[delegate calendarView:self heightChanged:self.calendarHeight];
     [self setNeedsDisplay];
 }
 
@@ -417,7 +419,9 @@
         int targetBlock = firstWeekDay + (targetDate-1);
         int targetX = targetColumn * (kVRGCalendarViewDayWidth);
         int targetY = kVRGCalendarViewTopBarHeight + targetRow * (kVRGCalendarViewDayHeight);
-        
+        if (targetDate == 11) {
+            
+        }
         // BOOL isCurrentMonth = NO;
         if (i<firstWeekDay) { //previous month
             targetDate = (prevMonthNumDays-firstWeekDay)+(i+1);
@@ -570,7 +574,7 @@
         labelCurrentMonth.textAlignment = UITextAlignmentCenter;
         
         UILongPressGestureRecognizer *gesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
-        gesture.minimumPressDuration = 0.1;
+        gesture.minimumPressDuration = 1.25;
         gesture.allowableMovement = 600;
         [self addGestureRecognizer:gesture];
         

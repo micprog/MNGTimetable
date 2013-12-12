@@ -31,11 +31,11 @@
     
     [self createTableViewData];
     
-    int calendarHight = 360;//calendarHight still has to be imported from VRGCalendarView
+    int calendarHeight = 360;//calendarHight still has to be imported from VRGCalendarView
     
-    int leftoverSpace = 100;//has to be calculated with calendarHight and screen hight
+    int leftoverSpace = 100;//has to be calculated with calendarHight and screen height
     
-    tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, calendarHight, 320, leftoverSpace)];
+    tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, calendarHeight, 320, leftoverSpace)];
     
     tableView.delegate = self;
     
@@ -44,7 +44,12 @@
     [self.view addSubview:tableView];
     
 }
-
+-(void)calendarView:(VRGCalendarView *)calendarView heightAboutToChange:(float)newHeight {
+    [tableView setFrameY:newHeight+20];
+    float bottom = [[self view] frameHeight] - newHeight - 42;
+    [tableView setFrameHeight:bottom];
+    
+}
 -(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated {
     if (month==[[NSDate date] month]) {
         NSArray *timetable = [Utilities fetchBaseTimetable:@"3a"];

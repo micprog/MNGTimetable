@@ -15,7 +15,7 @@
 
 #define kVRGCalendarViewDayWidth 46
 #define kVRGCalendarViewDayHeight 46
-
+@class VRGCalendarView;
 @protocol VRGCalendarViewDelegate;
 @interface VRGCalendarView : UIView {
     id <VRGCalendarViewDelegate> delegate;
@@ -66,4 +66,6 @@
 @protocol VRGCalendarViewDelegate <NSObject>
 -(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated;
 -(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date;
+//-(void)calendarView:(VRGCalendarView *)calendarView heightChanged:(float)height;
+-(void)calendarView:(VRGCalendarView *)calendarView heightAboutToChange:(float)height;
 @end
