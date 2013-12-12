@@ -10,11 +10,13 @@
 #import "VRGCalendarView.h"
 
 
-@interface FirstViewController : UIViewController <VRGCalendarViewDelegate> {
+@interface FirstViewController : UIViewController <VRGCalendarViewDelegate, UITableViewDelegate, UITableViewDataSource> {
     
-    
+    UITableView *tableView;
+    NSArray *tableViewArray;
     
 }
 
+@property (nonatomic, retain) UITableView *tableView;
 
 @end
