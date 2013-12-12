@@ -17,7 +17,7 @@
 @implementation VRGCalendarView
 
 @synthesize currentMonth,delegate,labelCurrentMonth, animationView_A,animationView_B;
-@synthesize markedDates,markedColors,calendarHeight,selectedDate, timetable, lessonCount, colors;
+@synthesize calendarHeight,selectedDate, timetable, lessonCount;
 
 #pragma mark - Select Date
 -(void)selectDate:(int)date {
@@ -46,30 +46,6 @@
     if ([delegate respondsToSelector:@selector(calendarView:dateSelected:)]) [delegate calendarView:self dateSelected:self.selectedDate];
 }
 
-#pragma mark - Mark Dates
-//NSArray can either contain NSDate objects or NSNumber objects with an int of the day.
--(void)markDates:(NSArray *)dates {
-    self.markedDates = dates;
-    NSMutableArray *colors = [[NSMutableArray alloc] init];
-    
-    for (int i = 0; i<[dates count]; i++) {
-        [colors addObject:[UIColor redColor]];
-    }
-    
-    self.markedColors = [NSArray arrayWithArray:colors];
-    [colors release];
-    
-    [self setNeedsDisplay];
-}
-
-//NSArray can either contain NSDate objects or NSNumber objects with an int of the day.
--(void)markDates:(NSArray *)dates withColors:(NSArray *)colors {
-    self.markedDates = dates;
-    self.markedColors = colors;
-    
-    [self setNeedsDisplay];
-}
-
 #pragma mark - Set date to now
 -(void)reset {
     NSCalendar *gregorian = [[NSCalendar alloc]
@@ -87,7 +63,6 @@
 #pragma mark - Next & Previous
 -(void)showNextMonth {
     if (isAnimating) return;
-    self.markedDates=nil;
     isAnimating=YES;
     prepAnimationNextMonth=YES;
     
@@ -127,7 +102,7 @@
     
     //Animation
     __block VRGCalendarView *blockSafeSelf = self;
-    [UIView animateWithDuration:0.2
+    [UIView animateWithDuration:4
                      animations:^{
                          [self updateSize];
                          //blockSafeSelf.frameHeight = 100;
@@ -155,7 +130,6 @@
 -(void)showPreviousMonth {
     if (isAnimating) return;
     isAnimating=YES;
-    self.markedDates=nil;
     //Prepare current screen
     prepAnimationPreviousMonth = YES;
     [self setNeedsDisplay];
@@ -213,7 +187,6 @@
      ];
 }
 
-
 #pragma mark - update size & row count
 -(void)updateSize {
     self.frameHeight = self.calendarHeight;
@@ -221,17 +194,27 @@
 }
 
 -(float)calendarHeight {
-    return kVRGCalendarViewTopBarHeight + [self numRows]*(kVRGCalendarViewDayHeight)+1;
+    return kVRGCalendarViewTopBarHeight + [self numRows]*(kVRGCalendarViewDayHeight);
 }
 
--(int)numRows {
+- (int)numRows {
     float lastBlock = [self.currentMonth numDaysInMonth]+([self.currentMonth firstWeekDayInMonth]-1);
     return ceilf(lastBlock/7);
 }
-
 #pragma mark - Touches
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event 
-{       
+- (void)touchDay:(CGPoint)touchPoint {
+    float xLocation = touchPoint.x;
+    float yLocation = touchPoint.y-kVRGCalendarViewTopBarHeight;
+    
+    int column = floorf(xLocation/(kVRGCalendarViewDayWidth));
+    int row = floorf(yLocation/(kVRGCalendarViewDayHeight));
+    
+    int blockNr = (column+1)+row*7;
+    int firstWeekDay = [self.currentMonth firstWeekDayInMonth]-1; //-1 because weekdays begin at 1, not 0
+    int date = blockNr-firstWeekDay;
+    [self selectDate:date];
+}
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     CGPoint touchPoint = [touch locationInView:self];
     
@@ -239,24 +222,23 @@
     
     //Touch a specific day
     if (touchPoint.y > kVRGCalendarViewTopBarHeight) {
-        float xLocation = touchPoint.x;
-        float yLocation = touchPoint.y-kVRGCalendarViewTopBarHeight;
-        
-        int column = floorf(xLocation/(kVRGCalendarViewDayWidth));
-        int row = floorf(yLocation/(kVRGCalendarViewDayHeight));
-        
-        int blockNr = (column+1)+row*7;
-        int firstWeekDay = [self.currentMonth firstWeekDayInMonth]-1; //-1 because weekdays begin at 1, not 0
-        int date = blockNr-firstWeekDay;
-        [self selectDate:date];
+        [self touchDay:touchPoint];
         return;
     }
-    
-    self.markedDates=nil;
-    self.markedColors=nil;  
+}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{       
+    UITouch *touch = [touches anyObject];
+    CGPoint touchPoint = [touch locationInView:self];
     
     CGRect rectArrowLeft = CGRectMake(0, 0, 50, 40);
     CGRect rectArrowRight = CGRectMake(self.frame.size.width-50, 0, 50, 40);
+    
+    //Touch a specific day
+    if (touchPoint.y > kVRGCalendarViewTopBarHeight) {
+        [self touchDay:touchPoint];
+        return;
+    }
     
     //Touch either arrows or month in middle
     if (CGRectContainsPoint(rectArrowLeft, touchPoint)) {
@@ -272,6 +254,37 @@
     }
 }
 
+- (void)handleTimer:(NSTimer *)timer
+{
+    [self tapAndHold:self.location];
+}
+
+- (void)handleGesture:(UIGestureRecognizer *)gesture
+{
+    self.location = [gesture locationInView:self];
+    
+    if (gesture.state == UIGestureRecognizerStateBegan)
+    {
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(handleTimer:) userInfo:nil repeats:YES];
+    }
+    else if (gesture.state == UIGestureRecognizerStateCancelled ||
+             gesture.state == UIGestureRecognizerStateFailed ||
+             gesture.state == UIGestureRecognizerStateEnded)
+    {
+        [self.timer invalidate];
+        self.timer = nil;
+    }
+    
+    [self tapAndHold:self.location];
+}
+
+- (void)tapAndHold:(CGPoint)location
+{
+    if (location.y > kVRGCalendarViewTopBarHeight) {
+        
+    }
+    NSLog(@"tap and hold");
+}
 #pragma mark - Drawing
 - (void)drawRect:(CGRect)rect
 {
@@ -489,6 +502,11 @@
                     
                     CGContextSetFillColorWithColor(context,
                                                    [UIColor colorWithHexString:hex].CGColor);
+                }  else if (targetDate == 5 && a == 2) {
+                    NSString *hex = (isSelectedDatePreviousMonth) ? @"0x383838" : @"0xFF0000";
+                    
+                    CGContextSetFillColorWithColor(context,
+                                                   [UIColor colorWithHexString:hex].CGColor);
                 } else {
                     CGContextSetFillColorWithColor(context, dotColor.CGColor);
                 }
@@ -550,6 +568,11 @@
         labelCurrentMonth.textColor = [UIColor colorWithHexString:@"0x383838"];
         labelCurrentMonth.textAlignment = UITextAlignmentCenter;
         
+        UILongPressGestureRecognizer *gesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
+        gesture.minimumPressDuration = 0.1;
+        gesture.allowableMovement = 600;
+        [self addGestureRecognizer:gesture];
+        
         [self performSelector:@selector(reset) withObject:nil afterDelay:0.1]; //so delegate can be set after init and still get called on init
         //        [self reset];
     }
@@ -562,11 +585,7 @@
     self.currentMonth=nil;
     self.labelCurrentMonth=nil;
     
-    self.markedDates=nil;
-    self.markedColors=nil;
-    
     [super dealloc];
 }
-
 
 @end

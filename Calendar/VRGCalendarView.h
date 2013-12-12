@@ -41,19 +41,15 @@
 @property (nonatomic, retain) UILabel *labelCurrentMonth;
 @property (nonatomic, retain) UIImageView *animationView_A;
 @property (nonatomic, retain) UIImageView *animationView_B;
-@property (nonatomic, retain) NSArray *markedDates;
-@property (nonatomic, retain) NSArray *markedColors;
 @property (nonatomic, getter = calendarHeight) float calendarHeight;
 @property (nonatomic, retain, getter = selectedDate) NSDate *selectedDate;
 @property (nonatomic, retain) NSArray *timetable;
 @property (nonatomic, assign) int lessonCount;
-@property (nonatomic, assign) NSArray *colors;
+@property (nonatomic) CGPoint location;
+@property (nonatomic, strong) NSTimer *timer;
 
 -(void)selectDate:(int)date;
 -(void)reset;
-
--(void)markDates:(NSArray *)dates;
--(void)markDates:(NSArray *)dates withColors:(NSArray *)colors;
 
 -(void)showNextMonth;
 -(void)showPreviousMonth;
@@ -61,6 +57,9 @@
 -(int)numRows;
 -(void)updateSize;
 -(UIImage *)drawCurrentState;
+
+-(void)handleGesture:(UIGestureRecognizer *)gesture;
+-(void)handleTimer:(NSTimer *)timer;
 
 @end
 

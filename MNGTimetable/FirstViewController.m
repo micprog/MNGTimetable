@@ -30,9 +30,7 @@
 
 -(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated {
     if (month==[[NSDate date] month]) {
-        NSArray *dates = [NSArray arrayWithObjects:[NSNumber numberWithInt:6],[NSNumber numberWithInt:23], nil];
         NSArray *timetable = [Utilities fetchBaseTimetable:@"3a"];
-        [calendarView markDates:dates];
         [calendarView setTimetable:timetable];
     }
     
