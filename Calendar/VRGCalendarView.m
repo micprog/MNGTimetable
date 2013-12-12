@@ -13,6 +13,7 @@
 #import "UIView+convenience.h"
 #import "FirstViewController.h"
 #import "Utilities.h"
+#import "Lesson.h"
 
 @implementation VRGCalendarView
 
@@ -273,8 +274,8 @@
 }
 
 #pragma mark - Drawing
-- (void)drawRect:(CGRect)rect
-{
+- (void)drawRect:(CGRect)rect {
+    
     int firstWeekDay = [self.currentMonth firstWeekDayInMonth]-1; //-1 because weekdays begin at 1, not 0
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -552,6 +553,9 @@
         
         [self performSelector:@selector(reset) withObject:nil afterDelay:0.1]; //so delegate can be set after init and still get called on init
         //        [self reset];
+        
+        [self setFrameY:20];
+        
     }
     return self;
 }

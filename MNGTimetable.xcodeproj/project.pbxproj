@@ -18,7 +18,6 @@
 		676F1DC21850BA8300480022 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DC11850BA8300480022 /* main.m */; };
 		676F1DC61850BA8300480022 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DC51850BA8300480022 /* AppDelegate.m */; };
 		676F1DC91850BA8300480022 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 676F1DC71850BA8300480022 /* Main_iPhone.storyboard */; };
-		676F1DCC1850BA8300480022 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 676F1DCA1850BA8300480022 /* Main_iPad.storyboard */; };
 		676F1DCF1850BA8300480022 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DCE1850BA8300480022 /* FirstViewController.m */; };
 		676F1DD21850BA8300480022 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DD11850BA8300480022 /* SecondViewController.m */; };
 		676F1DD41850BA8300480022 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 676F1DD31850BA8300480022 /* Images.xcassets */; };
@@ -33,6 +32,7 @@
 		676F1E0C1850C2B500480022 /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DFD1850C2B500480022 /* UIView+convenience.m */; };
 		676F1E0E1850C2B500480022 /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1E011850C2B500480022 /* VRGCalendarView.m */; };
 		676F1E771851045600480022 /* Classes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 676F1E761851045600480022 /* Classes.plist */; };
+		67DD73AC1859EAC0007BC7F0 /* Wishlist.md in Resources */ = {isa = PBXBuildFile; fileRef = 67DD73AB1859EAC0007BC7F0 /* Wishlist.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +63,6 @@
 		676F1DC41850BA8300480022 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		676F1DC51850BA8300480022 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		676F1DC81850BA8300480022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		676F1DCB1850BA8300480022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		676F1DCD1850BA8300480022 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		676F1DCE1850BA8300480022 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		676F1DD01850BA8300480022 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -85,6 +84,7 @@
 		676F1E001850C2B500480022 /* VRGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGCalendarView.h; sourceTree = "<group>"; };
 		676F1E011850C2B500480022 /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGCalendarView.m; sourceTree = "<group>"; };
 		676F1E761851045600480022 /* Classes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Classes.plist; sourceTree = "<group>"; };
+		67DD73AB1859EAC0007BC7F0 /* Wishlist.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Wishlist.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,11 +154,10 @@
 			isa = PBXGroup;
 			children = (
 				676F1E73185103C100480022 /* Data */,
+				5C6532D21851C48E00FEFEE5 /* Icons */,
 				676F1DC41850BA8300480022 /* AppDelegate.h */,
 				676F1DC51850BA8300480022 /* AppDelegate.m */,
 				676F1DC71850BA8300480022 /* Main_iPhone.storyboard */,
-				5C6532D21851C48E00FEFEE5 /* Icons */,
-				676F1DCA1850BA8300480022 /* Main_iPad.storyboard */,
 				676F1DCD1850BA8300480022 /* FirstViewController.h */,
 				676F1DCE1850BA8300480022 /* FirstViewController.m */,
 				676F1DD01850BA8300480022 /* SecondViewController.h */,
@@ -170,6 +169,7 @@
 				5C6636E01851135600B88E04 /* Lesson.m */,
 				5C6636E21851323E00B88E04 /* Utilities.h */,
 				5C6636E31851323E00B88E04 /* Utilities.m */,
+				67DD73AB1859EAC0007BC7F0 /* Wishlist.md */,
 			);
 			path = MNGTimetable;
 			sourceTree = "<group>";
@@ -308,7 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C6532D61851CC1900FEFEE5 /* appbar.cog.png in Resources */,
-				676F1DCC1850BA8300480022 /* Main_iPad.storyboard in Resources */,
+				67DD73AC1859EAC0007BC7F0 /* Wishlist.md in Resources */,
 				676F1DD41850BA8300480022 /* Images.xcassets in Resources */,
 				676F1DC91850BA8300480022 /* Main_iPhone.storyboard in Resources */,
 				676F1E771851045600480022 /* Classes.plist in Resources */,
@@ -379,14 +379,6 @@
 				676F1DC81850BA8300480022 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		676F1DCA1850BA8300480022 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				676F1DCB1850BA8300480022 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		676F1DE31850BA8400480022 /* InfoPlist.strings */ = {
@@ -487,6 +479,7 @@
 				INFOPLIST_FILE = "MNGTimetable/MNGTimetable-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -504,6 +497,7 @@
 				INFOPLIST_FILE = "MNGTimetable/MNGTimetable-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
