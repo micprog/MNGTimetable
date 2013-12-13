@@ -1,24 +1,23 @@
 //
-//  VRGCalendarView.h
-//  Vurig
+//  MNGCalendarView.h
 //
-//  Created by in 't Veen Tjeerd on 5/8/12.
-//  Copyright (c) 2012 Vurig Media. All rights reserved.
+//  Created by Michael Rogenmoser, Áedán Christie
+//  Copyright (c) 2013 Michael Rogenmoser, Áedán Christie. All rights reserved.
 //
 
 
 #import <UIKit/UIKit.h>
 #import "UIColor+expanded.h"
 
-#define kVRGCalendarViewTopBarHeight 60
-#define kVRGCalendarViewWidth 320
+#define kMNGCalendarViewTopBarHeight 60
+#define kMNGCalendarViewWidth 320
 
-#define kVRGCalendarViewDayWidth 46
-#define kVRGCalendarViewDayHeight 46
-@class VRGCalendarView;
-@protocol VRGCalendarViewDelegate;
-@interface VRGCalendarView : UIView {
-    id <VRGCalendarViewDelegate> delegate;
+#define kMNGCalendarViewDayWidth 46
+#define kMNGCalendarViewDayHeight 46
+@class MNGCalendarView;
+@protocol MNGCalendarViewDelegate;
+@interface MNGCalendarView : UIView {
+    id <MNGCalendarViewDelegate> delegate;
     
     NSDate *currentMonth;
     
@@ -36,7 +35,7 @@
     
 }
 
-@property (nonatomic, retain) id <VRGCalendarViewDelegate> delegate;
+@property (nonatomic, retain) id <MNGCalendarViewDelegate> delegate;
 @property (nonatomic, retain) NSDate *currentMonth;
 @property (nonatomic, retain) UILabel *labelCurrentMonth;
 @property (nonatomic, retain) UIImageView *animationView_A;
@@ -63,9 +62,9 @@
 
 @end
 
-@protocol VRGCalendarViewDelegate <NSObject>
--(void)calendarView:(VRGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated;
--(void)calendarView:(VRGCalendarView *)calendarView dateSelected:(NSDate *)date;
-//-(void)calendarView:(VRGCalendarView *)calendarView heightChanged:(float)height;
--(void)calendarView:(VRGCalendarView *)calendarView heightAboutToChange:(float)height;
+@protocol MNGCalendarViewDelegate <NSObject>
+-(void)calendarView:(MNGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated;
+-(void)calendarView:(MNGCalendarView *)calendarView dateSelected:(NSDate *)date;
+//-(void)calendarView:(MNGCalendarView *)calendarView heightChanged:(float)height;
+-(void)calendarView:(MNGCalendarView *)calendarView heightAboutToChange:(float)height;
 @end

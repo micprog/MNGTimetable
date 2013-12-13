@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VRGCalendarView.h"
+#import "MNGCalendarView.h"
 
 
-@interface FirstViewController : UIViewController <VRGCalendarViewDelegate, UITableViewDelegate, UITableViewDataSource> {
+@interface FirstViewController : UIViewController <MNGCalendarViewDelegate, UITableViewDelegate, UITableViewDataSource> {
     
     UITableView *tableView;
     NSArray *tableViewArray;

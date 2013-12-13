@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class VRGCalendarView;
+@class MNGCalendarView;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

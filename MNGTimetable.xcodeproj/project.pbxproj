@@ -30,7 +30,7 @@
 		676F1E0A1850C2B500480022 /* NSMutableArray+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DF91850C2B500480022 /* NSMutableArray+convenience.m */; };
 		676F1E0B1850C2B500480022 /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DFB1850C2B500480022 /* UIColor+expanded.m */; };
 		676F1E0C1850C2B500480022 /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DFD1850C2B500480022 /* UIView+convenience.m */; };
-		676F1E0E1850C2B500480022 /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1E011850C2B500480022 /* VRGCalendarView.m */; };
+		676F1E0E1850C2B500480022 /* MNGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1E011850C2B500480022 /* MNGCalendarView.m */; };
 		676F1E771851045600480022 /* Classes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 676F1E761851045600480022 /* Classes.plist */; };
 /* End PBXBuildFile section */
 
@@ -80,8 +80,8 @@
 		676F1DFB1850C2B500480022 /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
 		676F1DFC1850C2B500480022 /* UIView+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+convenience.h"; sourceTree = "<group>"; };
 		676F1DFD1850C2B500480022 /* UIView+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+convenience.m"; sourceTree = "<group>"; };
-		676F1E001850C2B500480022 /* VRGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGCalendarView.h; sourceTree = "<group>"; };
-		676F1E011850C2B500480022 /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGCalendarView.m; sourceTree = "<group>"; };
+		676F1E001850C2B500480022 /* MNGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNGCalendarView.h; sourceTree = "<group>"; };
+		676F1E011850C2B500480022 /* MNGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNGCalendarView.m; sourceTree = "<group>"; };
 		676F1E761851045600480022 /* Classes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Classes.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,8 +211,8 @@
 				676F1DFB1850C2B500480022 /* UIColor+expanded.m */,
 				676F1DFC1850C2B500480022 /* UIView+convenience.h */,
 				676F1DFD1850C2B500480022 /* UIView+convenience.m */,
-				676F1E001850C2B500480022 /* VRGCalendarView.h */,
-				676F1E011850C2B500480022 /* VRGCalendarView.m */,
+				676F1E001850C2B500480022 /* MNGCalendarView.h */,
+				676F1E011850C2B500480022 /* MNGCalendarView.m */,
 			);
 			path = Calendar;
 			sourceTree = SOURCE_ROOT;
@@ -328,7 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				676F1E0E1850C2B500480022 /* VRGCalendarView.m in Sources */,
+				676F1E0E1850C2B500480022 /* MNGCalendarView.m in Sources */,
 				676F1E0A1850C2B500480022 /* NSMutableArray+convenience.m in Sources */,
 				676F1DD21850BA8300480022 /* SecondViewController.m in Sources */,
 				676F1E091850C2B500480022 /* NSDate+convenience.m in Sources */,
