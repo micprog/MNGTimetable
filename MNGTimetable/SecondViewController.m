@@ -28,17 +28,6 @@
     
     arrayClass = [[[NSMutableArray alloc]init]retain];
     arrayClassUsable = [[NSMutableArray alloc]init];
-    /*
-    [arrayClass addObject:@"3a"];
-    [arrayClass addObject:@"3b"];
-    [arrayClass addObject:@"3c"];
-    [arrayClass addObject:@"3d"];
-    [arrayClass addObject:@"3e"];
-    */
-    //arrayClass = [[NSArray arrayWithContentsOfFile:
-                                //[[NSBundle mainBundle] pathForResource:@"Classes" ofType:@"plist"]] retain];
-    
-    //NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"MNGTimetable/Data/Classes" ofType:@"plist"];
     
     ClassesPath = [[self docsDir]stringByAppendingPathComponent:@"Classes.plist"];
     
