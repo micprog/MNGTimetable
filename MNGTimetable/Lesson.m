@@ -10,7 +10,7 @@
 
 @implementation Lesson
 
-@synthesize name, endTime, room, startTime, teacher, type, subject;
+@synthesize name, endTime, room, startTime, teacher, type, subject, lesson;
 
 - (id)init {
     if ( self = [super init] ) {
@@ -20,6 +20,7 @@
         name = @"";
         startTime = @"";
         endTime = @"";
+        lesson = NULL;
         room = @"";
         
         return self;

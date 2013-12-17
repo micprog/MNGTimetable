@@ -74,7 +74,6 @@
     //Old month
     float oldSize = self.calendarHeight;
     UIImage *imageCurrentMonth = [self drawCurrentState];
-    [Utilities saveImage:imageCurrentMonth];
     //New month
     self.currentMonth = [currentMonth offsetMonth:1];
     if ([delegate respondsToSelector:@selector(calendarView:switchedToMonth:targetHeight: animated:)]) [delegate calendarView:self switchedToMonth:[currentMonth month] targetHeight:self.calendarHeight animated:YES];

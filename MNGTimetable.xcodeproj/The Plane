@@ -1,0 +1,14 @@
+# 5. The Plane
+## 5.1 Vector and component form
+Let the plane e be determined by the points A, B, C
+[image plane.png]
+The position vector r of a general point P e E can be written as the sum of the position vector of a given point A e E and a linear combiation of two non collinear direction vectors AB and AC.
+
+[image vector form]
+
+If we think of the vector form representing a 3x5 system of simultaneous linear equations we get:
+
+[image component form]
+
+Remark: As for the line the comoponents of the direction vector are supposed to be whole numbers without common dividers.
+Example: E = M(18/6/96), N(24/7/95), G(21/3/98)

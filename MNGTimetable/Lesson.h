@@ -18,7 +18,8 @@
 @property (copy) NSString *teacher;
 @property (copy) NSString *room;
 @property (copy) NSString *subject;
-
+@property int *lesson;
 
 - (id)init;
+
 @end

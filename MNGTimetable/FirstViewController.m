@@ -55,14 +55,10 @@
         NSArray *timetable = [Utilities fetchBaseTimetable:@"3a"];
         [calendarView setTimetable:timetable];
     }
-    
-    
-    //load data for month
 }
 
 -(void)calendarView:(MNGCalendarView *)calendarView dateSelected:(NSDate *)date {
     NSLog(@"Selected date = %@",date);
-    
     [tableView reloadData];
     
 }
