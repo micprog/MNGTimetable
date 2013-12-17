@@ -14,7 +14,10 @@
 + (void) updateDataFiles {
     
 }
-
++ (NSArray *) listTeachers {
+    
+    return nil;
+}
 + (NSArray *) fetchBaseTimetable:(NSString*) name {
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL
                                                           URLWithString:@"http://localhost:8000/3a.json"]];

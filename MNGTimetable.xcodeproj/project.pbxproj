@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C135742186069D300BC04B5 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C135738186069D300BC04B5 /* FMDatabase.m */; };
+		5C135743186069D300BC04B5 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C13573A186069D300BC04B5 /* FMDatabaseAdditions.m */; };
+		5C135744186069D300BC04B5 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C13573C186069D300BC04B5 /* FMDatabasePool.m */; };
+		5C135745186069D300BC04B5 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C13573E186069D300BC04B5 /* FMDatabaseQueue.m */; };
+		5C135746186069D300BC04B5 /* fmdb.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C13573F186069D300BC04B5 /* fmdb.m */; };
+		5C135747186069D300BC04B5 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C135741186069D300BC04B5 /* FMResultSet.m */; };
 		5C6532D41851C48E00FEFEE5 /* appbar.calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6532D31851C48E00FEFEE5 /* appbar.calendar.png */; };
 		5C6532D61851CC1900FEFEE5 /* appbar.cog.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6532D51851CC1900FEFEE5 /* appbar.cog.png */; };
 		5C6636E11851135600B88E04 /* Lesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6636E01851135600B88E04 /* Lesson.m */; };
@@ -45,6 +51,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C135737186069D300BC04B5 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		5C135738186069D300BC04B5 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		5C135739186069D300BC04B5 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		5C13573A186069D300BC04B5 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		5C13573B186069D300BC04B5 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		5C13573C186069D300BC04B5 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		5C13573D186069D300BC04B5 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		5C13573E186069D300BC04B5 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		5C13573F186069D300BC04B5 /* fmdb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fmdb.m; sourceTree = "<group>"; };
+		5C135740186069D300BC04B5 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		5C135741186069D300BC04B5 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		5C6532D31851C48E00FEFEE5 /* appbar.calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appbar.calendar.png; sourceTree = "<group>"; };
 		5C6532D51851CC1900FEFEE5 /* appbar.cog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appbar.cog.png; sourceTree = "<group>"; };
 		5C6636DF1851135600B88E04 /* Lesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lesson.h; sourceTree = "<group>"; };
@@ -109,6 +126,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C135736186069D300BC04B5 /* FMDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				5C135737186069D300BC04B5 /* FMDatabase.h */,
+				5C135738186069D300BC04B5 /* FMDatabase.m */,
+				5C135739186069D300BC04B5 /* FMDatabaseAdditions.h */,
+				5C13573A186069D300BC04B5 /* FMDatabaseAdditions.m */,
+				5C13573B186069D300BC04B5 /* FMDatabasePool.h */,
+				5C13573C186069D300BC04B5 /* FMDatabasePool.m */,
+				5C13573D186069D300BC04B5 /* FMDatabaseQueue.h */,
+				5C13573E186069D300BC04B5 /* FMDatabaseQueue.m */,
+				5C13573F186069D300BC04B5 /* fmdb.m */,
+				5C135740186069D300BC04B5 /* FMResultSet.h */,
+				5C135741186069D300BC04B5 /* FMResultSet.m */,
+			);
+			path = FMDatabase;
+			sourceTree = "<group>";
+		};
 		5C6532D21851C48E00FEFEE5 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +202,7 @@
 				5C6636E01851135600B88E04 /* Lesson.m */,
 				5C6636E21851323E00B88E04 /* Utilities.h */,
 				5C6636E31851323E00B88E04 /* Utilities.m */,
+				5C135736186069D300BC04B5 /* FMDatabase */,
 			);
 			path = MNGTimetable;
 			sourceTree = "<group>";
@@ -331,12 +367,18 @@
 				676F1E0E1850C2B500480022 /* MNGCalendarView.m in Sources */,
 				676F1E0A1850C2B500480022 /* NSMutableArray+convenience.m in Sources */,
 				676F1DD21850BA8300480022 /* SecondViewController.m in Sources */,
+				5C135742186069D300BC04B5 /* FMDatabase.m in Sources */,
 				676F1E091850C2B500480022 /* NSDate+convenience.m in Sources */,
+				5C135745186069D300BC04B5 /* FMDatabaseQueue.m in Sources */,
 				676F1E0C1850C2B500480022 /* UIView+convenience.m in Sources */,
 				676F1DC61850BA8300480022 /* AppDelegate.m in Sources */,
 				5C6636E41851323E00B88E04 /* Utilities.m in Sources */,
+				5C135743186069D300BC04B5 /* FMDatabaseAdditions.m in Sources */,
+				5C135746186069D300BC04B5 /* fmdb.m in Sources */,
 				676F1DCF1850BA8300480022 /* FirstViewController.m in Sources */,
 				5C6636E11851135600B88E04 /* Lesson.m in Sources */,
+				5C135747186069D300BC04B5 /* FMResultSet.m in Sources */,
+				5C135744186069D300BC04B5 /* FMDatabasePool.m in Sources */,
 				676F1E0B1850C2B500480022 /* UIColor+expanded.m in Sources */,
 				676F1DC21850BA8300480022 /* main.m in Sources */,
 			);

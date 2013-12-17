@@ -12,5 +12,6 @@
 
 + (void) updateDataFiles;
 + (NSArray *) fetchBaseTimetable:(NSString*) name ;
++ (NSArray *) listTeachers;
 + (void)saveImage: (UIImage*)image;
 @end
