@@ -7,11 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FMDatabase.h"
 
-@interface Utilities : NSObject
+@interface Utilities : NSObject {
+    FMDatabase *database;
+}
+
 
 + (void) updateDataFiles;
-+ (NSArray *) fetchBaseTimetable:(NSString*) name ;
-+ (NSArray *) listTeachers;
++ (NSArray *) fetchBaseTimetable:(NSString*) name;
 + (void)saveImage: (UIImage*)image;
++ (FMDatabase *) setupDatabase;
++ (NSMutableArray *) listClasses: (FMDatabase*) database;
++ (NSMutableArray *) listOptionalSubjects: (FMDatabase*) database;
 @end

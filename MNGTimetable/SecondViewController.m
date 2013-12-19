@@ -7,6 +7,7 @@
 //
 
 #import "SecondViewController.h"
+#import "Utilities.h"
 
 @interface SecondViewController ()
 
@@ -34,7 +35,7 @@
     if (![[NSFileManager defaultManager]fileExistsAtPath:ClassesPath]) {
         [[NSFileManager defaultManager]copyItemAtPath:[[NSBundle mainBundle]pathForResource:@"Classes" ofType:@"plist"] toPath:ClassesPath error:nil];
     }
-    
+    /*
     arrayClass = [NSArray arrayWithContentsOfFile:ClassesPath];
     
     NSLog(@"Count: %i", [arrayClass count]);
@@ -42,7 +43,9 @@
     for (int i=0; i<[arrayClass count]; i++) {
         [arrayClassUsable addObject:[arrayClass objectAtIndex:i]];
     }
-    
+    */
+    FMDatabase *db = [Utilities setupDatabase];
+    arrayClassUsable = [Utilities listOptionalSubjects:db];
     [_ClassPicker selectRow:1 inComponent:0 animated:NO];
     
     

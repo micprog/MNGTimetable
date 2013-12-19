@@ -31,9 +31,9 @@
     
     [self createTableViewData];
     
-    int calendarHeight = 360;//calendarHight still has to be imported from MNGCalendarView
+    int calendarHeight = 360; //calendarHight still has to be imported from MNGCalendarView
     
-    int leftoverSpace = 100;//has to be calculated with calendarHight and screen height
+    int leftoverSpace = 100; //has to be calculated with calendarHight and screen height
     
     tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, calendarHeight, 320, leftoverSpace)];
     
@@ -44,6 +44,8 @@
     [self.view addSubview:tableView];
     
 }
+
+
 -(void)calendarView:(MNGCalendarView *)calendarView heightAboutToChange:(float)newHeight {
     [tableView setFrameY:newHeight+20];
     float bottom = [[self view] frameHeight] - newHeight - 42;
