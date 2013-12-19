@@ -15,6 +15,22 @@
     UITableView *tableView;
     NSArray *tableViewArray;
     
+    NSMutableArray *LessonNameArray;
+    NSMutableArray *LessonTeacherArray;
+    NSMutableArray *LessonRoomArray;
+    NSMutableArray *LessonStartArray;
+    NSMutableArray *LessonEndArray;
+    
+    NSMutableArray *LessonNameArrayUsable;
+    NSMutableArray *LessonTeacherArrayUsable;
+    NSMutableArray *LessonRoomArrayUsable;
+    NSMutableArray *LessonStartArrayUsable;
+    NSMutableArray *LessonEndArrayUsable;
+    
+    NSString *LessonStartPath;
+    NSString *LessonEndPath;
+
+    
 }
 
 @property (nonatomic, retain) UITableView *tableView;

@@ -11,7 +11,6 @@
 		5C135743186069D300BC04B5 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C13573A186069D300BC04B5 /* FMDatabaseAdditions.m */; };
 		5C135744186069D300BC04B5 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C13573C186069D300BC04B5 /* FMDatabasePool.m */; };
 		5C135745186069D300BC04B5 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C13573E186069D300BC04B5 /* FMDatabaseQueue.m */; };
-		5C135746186069D300BC04B5 /* fmdb.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C13573F186069D300BC04B5 /* fmdb.m */; };
 		5C135747186069D300BC04B5 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C135741186069D300BC04B5 /* FMResultSet.m */; };
 		5C6532D41851C48E00FEFEE5 /* appbar.calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6532D31851C48E00FEFEE5 /* appbar.calendar.png */; };
 		5C6532D61851CC1900FEFEE5 /* appbar.cog.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6532D51851CC1900FEFEE5 /* appbar.cog.png */; };
@@ -38,6 +37,12 @@
 		676F1E0C1850C2B500480022 /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DFD1850C2B500480022 /* UIView+convenience.m */; };
 		676F1E0E1850C2B500480022 /* MNGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1E011850C2B500480022 /* MNGCalendarView.m */; };
 		676F1E771851045600480022 /* Classes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 676F1E761851045600480022 /* Classes.plist */; };
+		678DC2D51863323B00A05329 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 678DC2D31863323A00A05329 /* libsqlite3.0.dylib */; };
+		678DC2D61863323B00A05329 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 678DC2D41863323B00A05329 /* libsqlite3.dylib */; };
+		678DC2D81863333D00A05329 /* LessonStart.plist in Resources */ = {isa = PBXBuildFile; fileRef = 678DC2D71863333D00A05329 /* LessonStart.plist */; };
+		678DC2DA186333A300A05329 /* LessonEnd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 678DC2D9186333A300A05329 /* LessonEnd.plist */; };
+		678DC2DC1863345900A05329 /* LessonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678DC2DB1863345900A05329 /* LessonCell.xib */; };
+		678DC2DF1863355600A05329 /* LessonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 678DC2DE1863355600A05329 /* LessonCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +64,6 @@
 		5C13573C186069D300BC04B5 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
 		5C13573D186069D300BC04B5 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
 		5C13573E186069D300BC04B5 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		5C13573F186069D300BC04B5 /* fmdb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fmdb.m; sourceTree = "<group>"; };
 		5C135740186069D300BC04B5 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		5C135741186069D300BC04B5 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		5C6532D31851C48E00FEFEE5 /* appbar.calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appbar.calendar.png; sourceTree = "<group>"; };
@@ -100,6 +104,13 @@
 		676F1E001850C2B500480022 /* MNGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNGCalendarView.h; sourceTree = "<group>"; };
 		676F1E011850C2B500480022 /* MNGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNGCalendarView.m; sourceTree = "<group>"; };
 		676F1E761851045600480022 /* Classes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Classes.plist; sourceTree = "<group>"; };
+		678DC2D31863323A00A05329 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		678DC2D41863323B00A05329 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		678DC2D71863333D00A05329 /* LessonStart.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LessonStart.plist; sourceTree = "<group>"; };
+		678DC2D9186333A300A05329 /* LessonEnd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LessonEnd.plist; sourceTree = "<group>"; };
+		678DC2DB1863345900A05329 /* LessonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LessonCell.xib; sourceTree = "<group>"; };
+		678DC2DD1863355600A05329 /* LessonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonCell.h; sourceTree = "<group>"; };
+		678DC2DE1863355600A05329 /* LessonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +118,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				678DC2D51863323B00A05329 /* libsqlite3.0.dylib in Frameworks */,
+				678DC2D61863323B00A05329 /* libsqlite3.dylib in Frameworks */,
 				676F1DB81850BA8300480022 /* CoreGraphics.framework in Frameworks */,
 				676F1DBA1850BA8300480022 /* UIKit.framework in Frameworks */,
 				676F1DB61850BA8300480022 /* Foundation.framework in Frameworks */,
@@ -137,7 +150,6 @@
 				5C13573C186069D300BC04B5 /* FMDatabasePool.m */,
 				5C13573D186069D300BC04B5 /* FMDatabaseQueue.h */,
 				5C13573E186069D300BC04B5 /* FMDatabaseQueue.m */,
-				5C13573F186069D300BC04B5 /* fmdb.m */,
 				5C135740186069D300BC04B5 /* FMResultSet.h */,
 				5C135741186069D300BC04B5 /* FMResultSet.m */,
 			);
@@ -175,6 +187,8 @@
 		676F1DB41850BA8300480022 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				678DC2D31863323A00A05329 /* libsqlite3.0.dylib */,
+				678DC2D41863323B00A05329 /* libsqlite3.dylib */,
 				676F1DB51850BA8300480022 /* Foundation.framework */,
 				676F1DB71850BA8300480022 /* CoreGraphics.framework */,
 				676F1DB91850BA8300480022 /* UIKit.framework */,
@@ -193,6 +207,9 @@
 				5C6532D21851C48E00FEFEE5 /* Icons */,
 				676F1DCD1850BA8300480022 /* FirstViewController.h */,
 				676F1DCE1850BA8300480022 /* FirstViewController.m */,
+				678DC2DB1863345900A05329 /* LessonCell.xib */,
+				678DC2DD1863355600A05329 /* LessonCell.h */,
+				678DC2DE1863355600A05329 /* LessonCell.m */,
 				676F1DD01850BA8300480022 /* SecondViewController.h */,
 				676F1DD11850BA8300480022 /* SecondViewController.m */,
 				676F1DD31850BA8300480022 /* Images.xcassets */,
@@ -257,6 +274,8 @@
 			isa = PBXGroup;
 			children = (
 				676F1E761851045600480022 /* Classes.plist */,
+				678DC2D9186333A300A05329 /* LessonEnd.plist */,
+				678DC2D71863333D00A05329 /* LessonStart.plist */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -344,7 +363,10 @@
 				676F1DD41850BA8300480022 /* Images.xcassets in Resources */,
 				676F1DC91850BA8300480022 /* Main_iPhone.storyboard in Resources */,
 				676F1E771851045600480022 /* Classes.plist in Resources */,
+				678DC2DA186333A300A05329 /* LessonEnd.plist in Resources */,
 				5C6532D41851C48E00FEFEE5 /* appbar.calendar.png in Resources */,
+				678DC2D81863333D00A05329 /* LessonStart.plist in Resources */,
+				678DC2DC1863345900A05329 /* LessonCell.xib in Resources */,
 				676F1DC01850BA8300480022 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,10 +396,10 @@
 				676F1DC61850BA8300480022 /* AppDelegate.m in Sources */,
 				5C6636E41851323E00B88E04 /* Utilities.m in Sources */,
 				5C135743186069D300BC04B5 /* FMDatabaseAdditions.m in Sources */,
-				5C135746186069D300BC04B5 /* fmdb.m in Sources */,
 				676F1DCF1850BA8300480022 /* FirstViewController.m in Sources */,
 				5C6636E11851135600B88E04 /* Lesson.m in Sources */,
 				5C135747186069D300BC04B5 /* FMResultSet.m in Sources */,
+				678DC2DF1863355600A05329 /* LessonCell.m in Sources */,
 				5C135744186069D300BC04B5 /* FMDatabasePool.m in Sources */,
 				676F1E0B1850C2B500480022 /* UIColor+expanded.m in Sources */,
 				676F1DC21850BA8300480022 /* main.m in Sources */,

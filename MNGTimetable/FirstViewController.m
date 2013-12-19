@@ -11,6 +11,7 @@
 #import "Utilities.h"
 #import "UIView+convenience.h"
 #import "NSDate+convenience.h"
+#import "LessonCell.h"
 
 
 @interface FirstViewController ()
@@ -28,9 +29,7 @@
     MNGCalendarView *calendar = [[MNGCalendarView alloc] init];
     calendar.delegate = self;
     [self.view addSubview:calendar];
-    
-    [self createTableViewData];
-    
+        
     int calendarHeight = 360;//calendarHight still has to be imported from MNGCalendarView
     
     int leftoverSpace = 100;//has to be calculated with calendarHight and screen height
@@ -43,7 +42,40 @@
     
     [self.view addSubview:tableView];
     
+    LessonStartPath = [[self docsDir]stringByAppendingPathComponent:@"LessonStart.plist"];
+    if (![[NSFileManager defaultManager]fileExistsAtPath:LessonStartPath]) {
+        [[NSFileManager defaultManager]copyItemAtPath:[[NSBundle mainBundle]pathForResource:@"LessonStart" ofType:@"plist"] toPath:LessonStartPath error:nil];
+    }
+    LessonEndPath = [[self docsDir]stringByAppendingString:@"LessonEndPath.plist"];
+    if (![[NSFileManager defaultManager]fileExistsAtPath:LessonEndPath]) {
+        [[NSFileManager defaultManager]copyItemAtPath:[[NSBundle mainBundle]pathForResource:@"LessonEnd" ofType:@"plist"] toPath:LessonEndPath error:nil];
+    }
+    
+    LessonStartArray = [NSArray arrayWithContentsOfFile:LessonStartPath];
+    LessonStartArrayUsable = [[NSMutableArray alloc]init];
+    
+    for (int i=0; i<[LessonStartArray count]; i++) {
+        [LessonStartArrayUsable addObject:[LessonStartArray objectAtIndex:i]];
+    }
+    
+    LessonEndArray = [NSArray arrayWithContentsOfFile:LessonEndPath];
+    
+    LessonEndArrayUsable = [[NSMutableArray alloc]init];
+    
+    for (int i=0; i<[LessonEndArray count]; i++) {
+        [LessonEndArrayUsable addObject:[LessonEndArray objectAtIndex:i]];
+    }
+    
+    
+    
 }
+
+- (NSString *)docsDir {
+    
+    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0];
+    
+}
+
 -(void)calendarView:(MNGCalendarView *)calendarView heightAboutToChange:(float)newHeight {
     [tableView setFrameY:newHeight+20];
     float bottom = [[self view] frameHeight] - newHeight - 42;
@@ -69,12 +101,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)createTableViewData {
+/*- (void)createTableViewData {
     
     NSArray *newArray = [[NSArray alloc]initWithObjects:@"hi", @"hi2", nil];
     tableViewArray = newArray;
     
-}
+}*/
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
@@ -82,22 +114,44 @@
     
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 60.0;
+    
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [tableViewArray count];
+    return [LessonStartArrayUsable count];
     
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"TimetableCell";
     
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    LessonCell *cell = nil;
+    
+    cell = (LessonCell *) [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    
+    
+    if (!cell) {
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"LessonCell" owner:nil options:nil];
+        
+        for (id currentObject in topLevelObjects) {
+            
+            if ([currentObject isKindOfClass:[LessonCell class]]) {
+                cell = (LessonCell *)currentObject;
+                break;
+            }
+            
+        }
+        
     }
     
-    cell.textLabel.text = [tableViewArray objectAtIndex:indexPath.row];
+    cell.LessonStart.text = [LessonStartArrayUsable objectAtIndex:indexPath.row];
+    cell.LessonEnd.text = [LessonEndArrayUsable objectAtIndex:indexPath.row];
     //cell is created here, here we have to change the cell style for the timetable
     return cell;
 }
