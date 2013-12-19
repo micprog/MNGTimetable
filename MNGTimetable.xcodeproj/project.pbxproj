@@ -16,6 +16,9 @@
 		5C6532D61851CC1900FEFEE5 /* appbar.cog.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6532D51851CC1900FEFEE5 /* appbar.cog.png */; };
 		5C6636E11851135600B88E04 /* Lesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6636E01851135600B88E04 /* Lesson.m */; };
 		5C6636E41851323E00B88E04 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6636E31851323E00B88E04 /* Utilities.m */; };
+		5C7B5F71186329E100E3837D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7B5F6F186329E100E3837D /* libsqlite3.0.dylib */; };
+		5C7B5F72186329E100E3837D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7B5F70186329E100E3837D /* libsqlite3.dylib */; };
+		5C7B5F7418634E3A00E3837D /* timetable.db in Resources */ = {isa = PBXBuildFile; fileRef = 5C7B5F7318634E3A00E3837D /* timetable.db */; };
 		676F1DB61850BA8300480022 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676F1DB51850BA8300480022 /* Foundation.framework */; };
 		676F1DB81850BA8300480022 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676F1DB71850BA8300480022 /* CoreGraphics.framework */; };
 		676F1DBA1850BA8300480022 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676F1DB91850BA8300480022 /* UIKit.framework */; };
@@ -37,8 +40,6 @@
 		676F1E0C1850C2B500480022 /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DFD1850C2B500480022 /* UIView+convenience.m */; };
 		676F1E0E1850C2B500480022 /* MNGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1E011850C2B500480022 /* MNGCalendarView.m */; };
 		676F1E771851045600480022 /* Classes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 676F1E761851045600480022 /* Classes.plist */; };
-		678DC2D51863323B00A05329 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 678DC2D31863323A00A05329 /* libsqlite3.0.dylib */; };
-		678DC2D61863323B00A05329 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 678DC2D41863323B00A05329 /* libsqlite3.dylib */; };
 		678DC2D81863333D00A05329 /* LessonStart.plist in Resources */ = {isa = PBXBuildFile; fileRef = 678DC2D71863333D00A05329 /* LessonStart.plist */; };
 		678DC2DA186333A300A05329 /* LessonEnd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 678DC2D9186333A300A05329 /* LessonEnd.plist */; };
 		678DC2DC1863345900A05329 /* LessonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678DC2DB1863345900A05329 /* LessonCell.xib */; };
@@ -76,6 +77,9 @@
 		5C6636E01851135600B88E04 /* Lesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lesson.m; sourceTree = "<group>"; };
 		5C6636E21851323E00B88E04 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		5C6636E31851323E00B88E04 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		5C7B5F6F186329E100E3837D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		5C7B5F70186329E100E3837D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		5C7B5F7318634E3A00E3837D /* timetable.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = timetable.db; path = Server/timetable.db; sourceTree = "<group>"; };
 		676F1DB21850BA8300480022 /* MNGTimetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNGTimetable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		676F1DB51850BA8300480022 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		676F1DB71850BA8300480022 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -129,8 +133,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				678DC2D51863323B00A05329 /* libsqlite3.0.dylib in Frameworks */,
-				678DC2D61863323B00A05329 /* libsqlite3.dylib in Frameworks */,
+				5C7B5F71186329E100E3837D /* libsqlite3.0.dylib in Frameworks */,
+				5C7B5F72186329E100E3837D /* libsqlite3.dylib in Frameworks */,
 				676F1DB81850BA8300480022 /* CoreGraphics.framework in Frameworks */,
 				676F1DBA1850BA8300480022 /* UIKit.framework in Frameworks */,
 				676F1DB61850BA8300480022 /* Foundation.framework in Frameworks */,
@@ -176,6 +180,15 @@
 			path = Icons;
 			sourceTree = "<group>";
 		};
+		5CD834421863958500A071D6 /* Support Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5C6636E21851323E00B88E04 /* Utilities.h */,
+				5C6636E31851323E00B88E04 /* Utilities.m */,
+			);
+			name = "Support Classes";
+			sourceTree = "<group>";
+		};
 		676F1DA91850BA8200480022 = {
 			isa = PBXGroup;
 			children = (
@@ -211,11 +224,9 @@
 		676F1DBB1850BA8300480022 /* MNGTimetable */ = {
 			isa = PBXGroup;
 			children = (
-				676F1E73185103C100480022 /* Data */,
 				676F1DC41850BA8300480022 /* AppDelegate.h */,
 				676F1DC51850BA8300480022 /* AppDelegate.m */,
 				676F1DC71850BA8300480022 /* Main_iPhone.storyboard */,
-				5C6532D21851C48E00FEFEE5 /* Icons */,
 				676F1DCD1850BA8300480022 /* FirstViewController.h */,
 				676F1DCE1850BA8300480022 /* FirstViewController.m */,
 				678DC33518638C4E00A05329 /* TableViewCells */,
@@ -226,12 +237,12 @@
 				678DC33218634FE000A05329 /* SettingsTableView.h */,
 				678DC33318634FE000A05329 /* SettingsTableView.m */,
 				676F1DD31850BA8300480022 /* Images.xcassets */,
+				676F1E73185103C100480022 /* Data */,
 				676F1DF01850C2B500480022 /* Calendar */,
 				676F1DBC1850BA8300480022 /* Supporting Files */,
 				5C6636DF1851135600B88E04 /* Lesson.h */,
 				5C6636E01851135600B88E04 /* Lesson.m */,
-				5C6636E21851323E00B88E04 /* Utilities.h */,
-				5C6636E31851323E00B88E04 /* Utilities.m */,
+				5CD834421863958500A071D6 /* Support Classes */,
 				5C135736186069D300BC04B5 /* FMDatabase */,
 			);
 			path = MNGTimetable;
@@ -286,6 +297,8 @@
 		676F1E73185103C100480022 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				5C6532D21851C48E00FEFEE5 /* Icons */,
+				5C7B5F7318634E3A00E3837D /* timetable.db */,
 				676F1E761851045600480022 /* Classes.plist */,
 				678DC2D9186333A300A05329 /* LessonEnd.plist */,
 				678DC2D71863333D00A05329 /* LessonStart.plist */,
@@ -391,6 +404,7 @@
 				676F1E771851045600480022 /* Classes.plist in Resources */,
 				678DC2DA186333A300A05329 /* LessonEnd.plist in Resources */,
 				5C6532D41851C48E00FEFEE5 /* appbar.calendar.png in Resources */,
+				5C7B5F7418634E3A00E3837D /* timetable.db in Resources */,
 				678DC2D81863333D00A05329 /* LessonStart.plist in Resources */,
 				678DC2DC1863345900A05329 /* LessonCell.xib in Resources */,
 				678DC34118638F5000A05329 /* OptionalSubjectCell.xib in Resources */,

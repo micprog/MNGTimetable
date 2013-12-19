@@ -8,16 +8,55 @@
 
 #import "Utilities.h"
 #import "Lesson.h"
+#import "FMDatabase.h"
 
 @implementation Utilities
 
 + (void) updateDataFiles {
     
 }
-+ (NSArray *) listTeachers {
+
++ (NSString *)getFilePath: (NSString *) fileName {
+    NSArray *file = [fileName componentsSeparatedByString:@"."];
+    NSString *fileString = [file objectAtIndex:0];
+    NSString *extension = [file objectAtIndex:1];
+    NSString *docsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0];
+    NSString *path = [docsDir stringByAppendingPathComponent:fileName];
     
-    return nil;
+    if (![[NSFileManager defaultManager]fileExistsAtPath:path]) {
+        [[NSFileManager defaultManager]copyItemAtPath:[[NSBundle mainBundle]pathForResource:fileString ofType:extension] toPath:path error:nil];
+    }
+    return path;
 }
+
++ (FMDatabase *) setupDatabase {
+    NSString *path = [self getFilePath:@"timetable.db"];
+    FMDatabase *db = [FMDatabase databaseWithPath:path];
+    if (![db open]) {
+        NSLog(@"Could not open db.");
+    }
+    return db;
+}
+
++ (NSMutableArray *) listClasses: (FMDatabase*) database {
+    NSMutableArray *classes = [[NSMutableArray alloc] init];
+    FMResultSet *s = [database executeQuery:@"SELECT name FROM Classes WHERE school='krm'"];
+    while ([s next]) {
+        NSString *name = [s stringForColumn:@"name"];
+        [classes addObject:name];
+    }
+    return classes;
+}
++ (NSMutableArray *) listOptionalSubjects: (FMDatabase*) database {
+    NSMutableArray *subjects = [[NSMutableArray alloc] init];
+    FMResultSet *s = [database executeQuery:@"SELECT name FROM Subjects WHERE school='krm' AND optional=1"];
+    while ([s next]) {
+        NSString *name = [s stringForColumn:@"name"];
+        [subjects addObject:name];
+    }
+    return subjects;
+}
+
 + (NSArray *) fetchBaseTimetable:(NSString*) name {
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL
                                                           URLWithString:@"http://localhost:8000/3a.json"]];

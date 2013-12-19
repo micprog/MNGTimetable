@@ -1,19 +1,19 @@
 //
-//  ClassPicker.m
+//  SecondViewController.m
 //  MNGTimetable
 //
 //  Created by Michael Rogenmoser on 12/5/13.
 //  Copyright (c) 2013 Michael Rogenmoser. All rights reserved.
 //
 
+#import "SecondViewController.h"
 #import "Utilities.h"
-#import "ClassPicker.h"
 
-@interface ClassPicker ()
+@interface SecondViewController ()
 
 @end
 
-@implementation ClassPicker
+@implementation SecondViewController
 
 
 - (NSString *)docsDir {
@@ -37,7 +37,9 @@
     }
     /*
     arrayClass = [NSArray arrayWithContentsOfFile:ClassesPath];
-        
+    
+    NSLog(@"Count: %i", [arrayClass count]);
+    
     for (int i=0; i<[arrayClass count]; i++) {
         [arrayClassUsable addObject:[arrayClass objectAtIndex:i]];
     }
@@ -46,7 +48,7 @@
     arrayClassUsable = [Utilities listOptionalSubjects:db];
     [_ClassPicker selectRow:1 inComponent:0 animated:NO];
     
-    self.title = @"Class";
+    
 }
 
 
