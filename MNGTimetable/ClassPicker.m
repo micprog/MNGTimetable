@@ -36,9 +36,7 @@
     }
     
     arrayClass = [NSArray arrayWithContentsOfFile:ClassesPath];
-    
-    NSLog(@"Count: %i", [arrayClass count]);
-    
+        
     for (int i=0; i<[arrayClass count]; i++) {
         [arrayClassUsable addObject:[arrayClass objectAtIndex:i]];
     }

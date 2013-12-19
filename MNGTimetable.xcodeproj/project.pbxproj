@@ -44,6 +44,9 @@
 		678DC2DC1863345900A05329 /* LessonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678DC2DB1863345900A05329 /* LessonCell.xib */; };
 		678DC2DF1863355600A05329 /* LessonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 678DC2DE1863355600A05329 /* LessonCell.m */; };
 		678DC33418634FE000A05329 /* SettingsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 678DC33318634FE000A05329 /* SettingsTableView.m */; };
+		678DC33F18638EB000A05329 /* OptionalSubjectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 678DC33E18638EB000A05329 /* OptionalSubjectCell.m */; };
+		678DC34118638F5000A05329 /* OptionalSubjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678DC34018638F5000A05329 /* OptionalSubjectCell.xib */; };
+		67B91DC01863A982002C91AA /* OptionalSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B91DBF1863A982002C91AA /* OptionalSubject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +117,11 @@
 		678DC2DE1863355600A05329 /* LessonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonCell.m; sourceTree = "<group>"; };
 		678DC33218634FE000A05329 /* SettingsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableView.h; sourceTree = "<group>"; };
 		678DC33318634FE000A05329 /* SettingsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableView.m; sourceTree = "<group>"; };
+		678DC33D18638EB000A05329 /* OptionalSubjectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionalSubjectCell.h; sourceTree = "<group>"; };
+		678DC33E18638EB000A05329 /* OptionalSubjectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionalSubjectCell.m; sourceTree = "<group>"; };
+		678DC34018638F5000A05329 /* OptionalSubjectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionalSubjectCell.xib; sourceTree = "<group>"; };
+		67B91DBE1863A982002C91AA /* OptionalSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionalSubject.h; sourceTree = "<group>"; };
+		67B91DBF1863A982002C91AA /* OptionalSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionalSubject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,11 +218,11 @@
 				5C6532D21851C48E00FEFEE5 /* Icons */,
 				676F1DCD1850BA8300480022 /* FirstViewController.h */,
 				676F1DCE1850BA8300480022 /* FirstViewController.m */,
-				678DC2DB1863345900A05329 /* LessonCell.xib */,
-				678DC2DD1863355600A05329 /* LessonCell.h */,
-				678DC2DE1863355600A05329 /* LessonCell.m */,
+				678DC33518638C4E00A05329 /* TableViewCells */,
 				676F1DD01850BA8300480022 /* ClassPicker.h */,
 				676F1DD11850BA8300480022 /* ClassPicker.m */,
+				67B91DBE1863A982002C91AA /* OptionalSubject.h */,
+				67B91DBF1863A982002C91AA /* OptionalSubject.m */,
 				678DC33218634FE000A05329 /* SettingsTableView.h */,
 				678DC33318634FE000A05329 /* SettingsTableView.m */,
 				676F1DD31850BA8300480022 /* Images.xcassets */,
@@ -283,6 +291,19 @@
 				678DC2D71863333D00A05329 /* LessonStart.plist */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		678DC33518638C4E00A05329 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				678DC2DB1863345900A05329 /* LessonCell.xib */,
+				678DC2DD1863355600A05329 /* LessonCell.h */,
+				678DC2DE1863355600A05329 /* LessonCell.m */,
+				678DC34018638F5000A05329 /* OptionalSubjectCell.xib */,
+				678DC33D18638EB000A05329 /* OptionalSubjectCell.h */,
+				678DC33E18638EB000A05329 /* OptionalSubjectCell.m */,
+			);
+			name = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +393,7 @@
 				5C6532D41851C48E00FEFEE5 /* appbar.calendar.png in Resources */,
 				678DC2D81863333D00A05329 /* LessonStart.plist in Resources */,
 				678DC2DC1863345900A05329 /* LessonCell.xib in Resources */,
+				678DC34118638F5000A05329 /* OptionalSubjectCell.xib in Resources */,
 				676F1DC01850BA8300480022 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +415,7 @@
 			files = (
 				676F1E0E1850C2B500480022 /* MNGCalendarView.m in Sources */,
 				676F1E0A1850C2B500480022 /* NSMutableArray+convenience.m in Sources */,
+				67B91DC01863A982002C91AA /* OptionalSubject.m in Sources */,
 				678DC33418634FE000A05329 /* SettingsTableView.m in Sources */,
 				676F1DD21850BA8300480022 /* ClassPicker.m in Sources */,
 				5C135742186069D300BC04B5 /* FMDatabase.m in Sources */,
@@ -402,6 +425,7 @@
 				676F1DC61850BA8300480022 /* AppDelegate.m in Sources */,
 				5C6636E41851323E00B88E04 /* Utilities.m in Sources */,
 				5C135743186069D300BC04B5 /* FMDatabaseAdditions.m in Sources */,
+				678DC33F18638EB000A05329 /* OptionalSubjectCell.m in Sources */,
 				676F1DCF1850BA8300480022 /* FirstViewController.m in Sources */,
 				5C6636E11851135600B88E04 /* Lesson.m in Sources */,
 				5C135747186069D300BC04B5 /* FMResultSet.m in Sources */,

@@ -1,20 +1,19 @@
 //
-//  SettingsTableView.m
+//  OptionalSubject.m
 //  MNGTimetable
 //
 //  Created by Michael Rogenmoser on 12/19/13.
 //  Copyright (c) 2013 Michael Rogenmoser. All rights reserved.
 //
 
-#import "SettingsTableView.h"
-#import "ClassPicker.h"
 #import "OptionalSubject.h"
+#import "OptionalSubjectCell.h"
 
-@interface SettingsTableView ()
+@interface OptionalSubject ()
 
 @end
 
-@implementation SettingsTableView
+@implementation OptionalSubject
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -25,40 +24,66 @@
     return self;
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
-    self.title = @"Settings";
+    OptionalSubjectArray = [[NSMutableArray alloc]init];
     
-    SettingsArray = [[NSMutableArray alloc]init];
+    [OptionalSubjectArray addObject:@"bla"];
     
-    [SettingsArray addObject:@"Class"];
-    [SettingsArray addObject:@"Optional Subject"];
-    
+    self.title = @"Optional Subject";
+
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+ 
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [SettingsArray count];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    return [OptionalSubjectArray count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"OptionalSubjectCell";
+    
+    OptionalSubjectCell *cell = nil;
+    
+    cell = (OptionalSubjectCell *) [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (!cell) {
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"OptionalSubjectCell" owner:nil options:nil];
+        
+        for (id currentObject in topLevelObjects) {
+            
+            if ([currentObject isKindOfClass:[OptionalSubjectCell class]]) {
+                cell = (OptionalSubjectCell *)currentObject;
+                break;
+            }
+            
+        }
+        
     }
-    cell.textLabel.text = [SettingsArray objectAtIndex:indexPath.row];
+    
+    cell.SubjectLabel.text = [OptionalSubjectArray objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -66,16 +91,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.row == 0) {
-        ClassPicker *newView = [self.storyboard instantiateViewControllerWithIdentifier:@"ClassPickerView"];
     
-        [self.navigationController pushViewController:newView animated:YES];
-    }
-    if (indexPath.row == 1) {
-        OptionalSubject *newView = [self.storyboard instantiateViewControllerWithIdentifier:@"OptionalSubjectView"];
-        
-        [self.navigationController pushViewController:newView animated:YES];
-    }
 }
 
 /*
