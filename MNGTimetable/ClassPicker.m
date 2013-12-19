@@ -1,18 +1,18 @@
 //
-//  SecondViewController.m
+//  ClassPicker.m
 //  MNGTimetable
 //
 //  Created by Michael Rogenmoser on 12/5/13.
 //  Copyright (c) 2013 Michael Rogenmoser. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "ClassPicker.h"
 
-@interface SecondViewController ()
+@interface ClassPicker ()
 
 @end
 
-@implementation SecondViewController
+@implementation ClassPicker
 
 
 - (NSString *)docsDir {
@@ -45,7 +45,7 @@
     
     [_ClassPicker selectRow:1 inComponent:0 animated:NO];
     
-    
+    self.title = @"Class";
 }
 
 
