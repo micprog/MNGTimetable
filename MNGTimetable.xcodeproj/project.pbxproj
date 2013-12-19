@@ -27,7 +27,7 @@
 		676F1DC61850BA8300480022 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DC51850BA8300480022 /* AppDelegate.m */; };
 		676F1DC91850BA8300480022 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 676F1DC71850BA8300480022 /* Main_iPhone.storyboard */; };
 		676F1DCF1850BA8300480022 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DCE1850BA8300480022 /* FirstViewController.m */; };
-		676F1DD21850BA8300480022 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DD11850BA8300480022 /* SecondViewController.m */; };
+		676F1DD21850BA8300480022 /* ClassPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DD11850BA8300480022 /* ClassPicker.m */; };
 		676F1DD41850BA8300480022 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 676F1DD31850BA8300480022 /* Images.xcassets */; };
 		676F1DDB1850BA8300480022 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676F1DDA1850BA8300480022 /* XCTest.framework */; };
 		676F1DDC1850BA8400480022 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676F1DB51850BA8300480022 /* Foundation.framework */; };
@@ -40,6 +40,11 @@
 		676F1E0C1850C2B500480022 /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1DFD1850C2B500480022 /* UIView+convenience.m */; };
 		676F1E0E1850C2B500480022 /* MNGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 676F1E011850C2B500480022 /* MNGCalendarView.m */; };
 		676F1E771851045600480022 /* Classes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 676F1E761851045600480022 /* Classes.plist */; };
+		678DC2D81863333D00A05329 /* LessonStart.plist in Resources */ = {isa = PBXBuildFile; fileRef = 678DC2D71863333D00A05329 /* LessonStart.plist */; };
+		678DC2DA186333A300A05329 /* LessonEnd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 678DC2D9186333A300A05329 /* LessonEnd.plist */; };
+		678DC2DC1863345900A05329 /* LessonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678DC2DB1863345900A05329 /* LessonCell.xib */; };
+		678DC2DF1863355600A05329 /* LessonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 678DC2DE1863355600A05329 /* LessonCell.m */; };
+		678DC33418634FE000A05329 /* SettingsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 678DC33318634FE000A05329 /* SettingsTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +90,8 @@
 		676F1DC81850BA8300480022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		676F1DCD1850BA8300480022 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		676F1DCE1850BA8300480022 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		676F1DD01850BA8300480022 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		676F1DD11850BA8300480022 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		676F1DD01850BA8300480022 /* ClassPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassPicker.h; sourceTree = "<group>"; };
+		676F1DD11850BA8300480022 /* ClassPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassPicker.m; sourceTree = "<group>"; };
 		676F1DD31850BA8300480022 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		676F1DD91850BA8300480022 /* MNGTimetableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MNGTimetableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		676F1DDA1850BA8300480022 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -104,6 +109,15 @@
 		676F1E001850C2B500480022 /* MNGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNGCalendarView.h; sourceTree = "<group>"; };
 		676F1E011850C2B500480022 /* MNGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNGCalendarView.m; sourceTree = "<group>"; };
 		676F1E761851045600480022 /* Classes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Classes.plist; sourceTree = "<group>"; };
+		678DC2D31863323A00A05329 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		678DC2D41863323B00A05329 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		678DC2D71863333D00A05329 /* LessonStart.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LessonStart.plist; sourceTree = "<group>"; };
+		678DC2D9186333A300A05329 /* LessonEnd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LessonEnd.plist; sourceTree = "<group>"; };
+		678DC2DB1863345900A05329 /* LessonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LessonCell.xib; sourceTree = "<group>"; };
+		678DC2DD1863355600A05329 /* LessonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonCell.h; sourceTree = "<group>"; };
+		678DC2DE1863355600A05329 /* LessonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonCell.m; sourceTree = "<group>"; };
+		678DC33218634FE000A05329 /* SettingsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableView.h; sourceTree = "<group>"; };
+		678DC33318634FE000A05329 /* SettingsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +172,15 @@
 			path = Icons;
 			sourceTree = "<group>";
 		};
+		5CD834421863958500A071D6 /* Support Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5C6636E21851323E00B88E04 /* Utilities.h */,
+				5C6636E31851323E00B88E04 /* Utilities.m */,
+			);
+			name = "Support Classes";
+			sourceTree = "<group>";
+		};
 		676F1DA91850BA8200480022 = {
 			isa = PBXGroup;
 			children = (
@@ -180,8 +203,8 @@
 		676F1DB41850BA8300480022 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5C7B5F6F186329E100E3837D /* libsqlite3.0.dylib */,
-				5C7B5F70186329E100E3837D /* libsqlite3.dylib */,
+				678DC2D31863323A00A05329 /* libsqlite3.0.dylib */,
+				678DC2D41863323B00A05329 /* libsqlite3.dylib */,
 				676F1DB51850BA8300480022 /* Foundation.framework */,
 				676F1DB71850BA8300480022 /* CoreGraphics.framework */,
 				676F1DB91850BA8300480022 /* UIKit.framework */,
@@ -193,22 +216,25 @@
 		676F1DBB1850BA8300480022 /* MNGTimetable */ = {
 			isa = PBXGroup;
 			children = (
-				676F1E73185103C100480022 /* Data */,
 				676F1DC41850BA8300480022 /* AppDelegate.h */,
 				676F1DC51850BA8300480022 /* AppDelegate.m */,
 				676F1DC71850BA8300480022 /* Main_iPhone.storyboard */,
-				5C6532D21851C48E00FEFEE5 /* Icons */,
 				676F1DCD1850BA8300480022 /* FirstViewController.h */,
 				676F1DCE1850BA8300480022 /* FirstViewController.m */,
-				676F1DD01850BA8300480022 /* SecondViewController.h */,
-				676F1DD11850BA8300480022 /* SecondViewController.m */,
+				678DC2DB1863345900A05329 /* LessonCell.xib */,
+				678DC2DD1863355600A05329 /* LessonCell.h */,
+				678DC2DE1863355600A05329 /* LessonCell.m */,
+				676F1DD01850BA8300480022 /* ClassPicker.h */,
+				676F1DD11850BA8300480022 /* ClassPicker.m */,
+				678DC33218634FE000A05329 /* SettingsTableView.h */,
+				678DC33318634FE000A05329 /* SettingsTableView.m */,
 				676F1DD31850BA8300480022 /* Images.xcassets */,
+				676F1E73185103C100480022 /* Data */,
 				676F1DF01850C2B500480022 /* Calendar */,
 				676F1DBC1850BA8300480022 /* Supporting Files */,
 				5C6636DF1851135600B88E04 /* Lesson.h */,
 				5C6636E01851135600B88E04 /* Lesson.m */,
-				5C6636E21851323E00B88E04 /* Utilities.h */,
-				5C6636E31851323E00B88E04 /* Utilities.m */,
+				5CD834421863958500A071D6 /* Support Classes */,
 				5C135736186069D300BC04B5 /* FMDatabase */,
 			);
 			path = MNGTimetable;
@@ -263,8 +289,11 @@
 		676F1E73185103C100480022 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				5C6532D21851C48E00FEFEE5 /* Icons */,
 				5C7B5F7318634E3A00E3837D /* timetable.db */,
 				676F1E761851045600480022 /* Classes.plist */,
+				678DC2D9186333A300A05329 /* LessonEnd.plist */,
+				678DC2D71863333D00A05329 /* LessonStart.plist */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -352,8 +381,11 @@
 				676F1DD41850BA8300480022 /* Images.xcassets in Resources */,
 				676F1DC91850BA8300480022 /* Main_iPhone.storyboard in Resources */,
 				676F1E771851045600480022 /* Classes.plist in Resources */,
+				678DC2DA186333A300A05329 /* LessonEnd.plist in Resources */,
 				5C6532D41851C48E00FEFEE5 /* appbar.calendar.png in Resources */,
 				5C7B5F7418634E3A00E3837D /* timetable.db in Resources */,
+				678DC2D81863333D00A05329 /* LessonStart.plist in Resources */,
+				678DC2DC1863345900A05329 /* LessonCell.xib in Resources */,
 				676F1DC01850BA8300480022 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,7 +407,8 @@
 			files = (
 				676F1E0E1850C2B500480022 /* MNGCalendarView.m in Sources */,
 				676F1E0A1850C2B500480022 /* NSMutableArray+convenience.m in Sources */,
-				676F1DD21850BA8300480022 /* SecondViewController.m in Sources */,
+				678DC33418634FE000A05329 /* SettingsTableView.m in Sources */,
+				676F1DD21850BA8300480022 /* ClassPicker.m in Sources */,
 				5C135742186069D300BC04B5 /* FMDatabase.m in Sources */,
 				676F1E091850C2B500480022 /* NSDate+convenience.m in Sources */,
 				5C135745186069D300BC04B5 /* FMDatabaseQueue.m in Sources */,
@@ -386,6 +419,7 @@
 				676F1DCF1850BA8300480022 /* FirstViewController.m in Sources */,
 				5C6636E11851135600B88E04 /* Lesson.m in Sources */,
 				5C135747186069D300BC04B5 /* FMResultSet.m in Sources */,
+				678DC2DF1863355600A05329 /* LessonCell.m in Sources */,
 				5C135744186069D300BC04B5 /* FMDatabasePool.m in Sources */,
 				676F1E0B1850C2B500480022 /* UIColor+expanded.m in Sources */,
 				676F1DC21850BA8300480022 /* main.m in Sources */,

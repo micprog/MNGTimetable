@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>5p</string>
-	<string>5q</string>
 	<string>4a</string>
 	<string>4b</string>
 	<string>4c</string>
@@ -11,8 +9,6 @@
 	<string>4e</string>
 	<string>4f</string>
 	<string>4g</string>
-	<string>4p</string>
-	<string>4q</string>
 	<string>3a</string>
 	<string>3b</string>
 	<string>3c</string>
@@ -20,8 +16,6 @@
 	<string>3e</string>
 	<string>3f</string>
 	<string>3g</string>
-	<string>3p</string>
-	<string>3q</string>
 	<string>2a</string>
 	<string>2b</string>
 	<string>2c</string>
@@ -29,8 +23,6 @@
 	<string>2e</string>
 	<string>2f</string>
 	<string>2g</string>
-	<string>2p</string>
-	<string>2q</string>
 	<string>1a</string>
 	<string>1b</string>
 	<string>1c</string>
@@ -38,9 +30,5 @@
 	<string>1e</string>
 	<string>1f</string>
 	<string>1g</string>
-	<string>1p</string>
-	<string>1q</string>
-	<string>u1</string>
-	<string>u2</string>
 </array>
 </plist>

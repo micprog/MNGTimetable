@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  ClassPicker.h
 //  MNGTimetable
 //
 //  Created by Michael Rogenmoser on 12/5/13.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #define CLASS 0
 
-@interface SecondViewController : UIViewController <NSStreamDelegate,UIPickerViewDataSource,UIPickerViewDelegate> {
+@interface ClassPicker : UIViewController <NSStreamDelegate,UIPickerViewDataSource,UIPickerViewDelegate> {
     
     NSMutableArray *arrayClass;
     NSMutableArray *arrayClassUsable;
