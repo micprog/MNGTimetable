@@ -8,6 +8,7 @@
 
 #import "OptionalSubject.h"
 #import "OptionalSubjectCell.h"
+#import "Utilities.h"
 
 @interface OptionalSubject ()
 
@@ -29,8 +30,9 @@
     [super viewDidLoad];
     
     OptionalSubjectArray = [[NSMutableArray alloc]init];
+    FMDatabase *db = [Utilities setupDatabase];
+    OptionalSubjectArray = [Utilities listOptionalSubjects:db];
     
-    [OptionalSubjectArray addObject:@"bla"];
     
     self.title = @"Optional Subject";
 

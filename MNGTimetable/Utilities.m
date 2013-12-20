@@ -96,4 +96,15 @@
         [data writeToFile:path atomically:YES];
     }
 }
++ (NSMutableArray *) rewriteArray: (NSMutableArray*) badArray {
+    
+    NSMutableArray *newArray = [[NSMutableArray alloc]init];
+    
+    for (int i = 0; i<[badArray count]; i++) {
+        
+        [newArray addObject:[badArray objectAtIndex:i]];
+        
+    }
+    return newArray;
+}
 @end

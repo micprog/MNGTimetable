@@ -27,23 +27,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    arrayClass = [[[NSMutableArray alloc]init]retain];
-    arrayClassUsable = [[NSMutableArray alloc]init];
+    arrayClass = [[NSMutableArray alloc]init];
     
-    ClassesPath = [[self docsDir]stringByAppendingPathComponent:@"Classes.plist"];
-    
-    if (![[NSFileManager defaultManager]fileExistsAtPath:ClassesPath]) {
-        [[NSFileManager defaultManager]copyItemAtPath:[[NSBundle mainBundle]pathForResource:@"Classes" ofType:@"plist"] toPath:ClassesPath error:nil];
-    }
-    /*
-    arrayClass = [NSArray arrayWithContentsOfFile:ClassesPath];
-        
-    for (int i=0; i<[arrayClass count]; i++) {
-        [arrayClassUsable addObject:[arrayClass objectAtIndex:i]];
-    }
-    */
     FMDatabase *db = [Utilities setupDatabase];
-    arrayClassUsable = [Utilities listOptionalSubjects:db];
+    arrayClass = [Utilities listClasses:db];
     [_ClassPicker selectRow:1 inComponent:0 animated:NO];
     
     self.title = @"Class";
@@ -60,7 +47,7 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     
     if (component == CLASS)
-        return [arrayClassUsable count];
+        return [arrayClass count];
     
     return 0;
     
@@ -69,7 +56,7 @@
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     
     if (component == CLASS) {
-        return [arrayClassUsable objectAtIndexedSubscript:row];
+        return [arrayClass objectAtIndexedSubscript:row];
     }
     return 0;
 }

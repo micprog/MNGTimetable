@@ -20,4 +20,6 @@
 + (FMDatabase *) setupDatabase;
 + (NSMutableArray *) listClasses: (FMDatabase*) database;
 + (NSMutableArray *) listOptionalSubjects: (FMDatabase*) database;
++ (NSString *)getFilePath: (NSString *) fileName;
++ (NSMutableArray *) rewriteArray: (NSMutableArray*) badArray;
 @end

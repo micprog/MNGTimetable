@@ -11,6 +11,7 @@
 #import "Utilities.h"
 #import "UIView+convenience.h"
 #import "NSDate+convenience.h"
+#import "LessonCell.h"
 
 
 @interface FirstViewController ()
@@ -29,8 +30,6 @@
     calendar.delegate = self;
     [self.view addSubview:calendar];
     
-    [self createTableViewData];
-    
     int calendarHeight = 360; //calendarHight still has to be imported from MNGCalendarView
     
     int leftoverSpace = 100; //has to be calculated with calendarHight and screen height
@@ -43,6 +42,15 @@
     
     [self.view addSubview:tableView];
     
+    LessonStartPath = [Utilities getFilePath:@"LessonStart.plist"];
+    
+    LessonEndPath = [Utilities getFilePath:@"LessonEnd.plist"];
+    
+    LessonStartArray = [NSArray arrayWithContentsOfFile:LessonStartPath];
+    LessonStartArray = [Utilities rewriteArray:LessonStartArray];
+    
+    LessonEndArray = [NSArray arrayWithContentsOfFile:LessonEndPath];
+    LessonEndArray = [Utilities rewriteArray:LessonEndArray];
 }
 
 
@@ -71,13 +79,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)createTableViewData {
-    
-    NSArray *newArray = [[NSArray alloc]initWithObjects:@"hi", @"hi2", nil];
-    tableViewArray = newArray;
-    
-}
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
     return 1;
@@ -86,22 +87,41 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [tableViewArray count];
+    return [LessonStartArray count];
     
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"TimetableCell";
     
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    LessonCell *cell = nil;
+    
+    cell = (LessonCell *) [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
+    
+    if (!cell) {
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"LessonCell" owner:nil options:nil];
+        
+            for (id currentObject in topLevelObjects) {
+                
+                if ([currentObject isKindOfClass:[LessonCell class]]) {
+                    cell = (LessonCell *)currentObject;
+                    break;
+                }
+            }
     }
     
-    cell.textLabel.text = [tableViewArray objectAtIndex:indexPath.row];
+    cell.LessonStart.text = [LessonStartArray objectAtIndex:indexPath.row];
+    cell.LessonEnd.text = [LessonEndArray objectAtIndex:indexPath.row];
     //cell is created here, here we have to change the cell style for the timetable
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 60.0;
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

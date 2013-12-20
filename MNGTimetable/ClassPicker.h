@@ -12,7 +12,6 @@
 @interface ClassPicker : UIViewController <NSStreamDelegate,UIPickerViewDataSource,UIPickerViewDelegate> {
     
     NSMutableArray *arrayClass;
-    NSMutableArray *arrayClassUsable;
     NSString *ClassesPath;
     
 }

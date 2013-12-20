@@ -21,13 +21,7 @@
     NSMutableArray *LessonRoomArray;
     NSMutableArray *LessonStartArray;
     NSMutableArray *LessonEndArray;
-    
-    NSMutableArray *LessonNameArrayUsable;
-    NSMutableArray *LessonTeacherArrayUsable;
-    NSMutableArray *LessonRoomArrayUsable;
-    NSMutableArray *LessonStartArrayUsable;
-    NSMutableArray *LessonEndArrayUsable;
-    
+        
     NSString *LessonStartPath;
     NSString *LessonEndPath;
 

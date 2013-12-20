@@ -300,8 +300,8 @@
 				5C6532D21851C48E00FEFEE5 /* Icons */,
 				5C7B5F7318634E3A00E3837D /* timetable.db */,
 				676F1E761851045600480022 /* Classes.plist */,
-				678DC2D9186333A300A05329 /* LessonEnd.plist */,
 				678DC2D71863333D00A05329 /* LessonStart.plist */,
+				678DC2D9186333A300A05329 /* LessonEnd.plist */,
 			);
 			name = Data;
 			sourceTree = "<group>";
