@@ -32,9 +32,8 @@
     OptionalSubjectArray = [[NSMutableArray alloc]init];
     FMDatabase *db = [Utilities setupDatabase];
     OptionalSubjectArray = [Utilities listOptionalSubjects:db];
-    
-    
-    self.title = @"Optional Subject";
+     
+    self.title = @"Optional Subjects";
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
