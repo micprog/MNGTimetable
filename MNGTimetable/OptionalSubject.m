@@ -15,6 +15,7 @@
 @end
 
 @implementation OptionalSubject
+@synthesize navigationBarTitle;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -34,7 +35,7 @@
     OptionalSubjectArray = [Utilities listOptionalSubjects:db];
     
     
-    self.title = @"Optional Subject";
+    self.title = navigationBarTitle;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

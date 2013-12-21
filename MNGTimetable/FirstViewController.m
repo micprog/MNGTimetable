@@ -62,8 +62,8 @@
 }
 -(void)calendarView:(MNGCalendarView *)calendarView switchedToMonth:(int)month targetHeight:(float)targetHeight animated:(BOOL)animated {
     if (month==[[NSDate date] month]) {
-        NSArray *timetable = [Utilities fetchBaseTimetable:@"3a"];
-        [calendarView setTimetable:timetable];
+        //NSArray *timetable = [Utilities fetchBaseTimetable:@"3a"];
+        //[calendarView setTimetable:timetable];
     }
 }
 

@@ -11,12 +11,14 @@
 
 @interface ClassPicker : UIViewController <NSStreamDelegate,UIPickerViewDataSource,UIPickerViewDelegate> {
     
+    NSString *navigationBarTitle;
     NSMutableArray *arrayClass;
     NSString *ClassesPath;
     
 }
 
 @property (strong, nonatomic) IBOutlet UIPickerView *ClassPicker;
+@property (nonatomic, retain) NSString *navigationBarTitle;
 
     
     

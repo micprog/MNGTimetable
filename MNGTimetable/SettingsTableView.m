@@ -30,10 +30,15 @@
     
     self.title = @"Settings";
     
+    ClassPickerCell = [[NSString alloc]init];
+    ClassPickerCell = @"Klasse";
+    OptionalSubjectString = [[NSString alloc]init];
+    OptionalSubjectString = @"Freifächer";
+    
     SettingsArray = [[NSMutableArray alloc]init];
     
-    [SettingsArray addObject:@"Class"];
-    [SettingsArray addObject:@"Optional Subject"];
+    [SettingsArray addObject:ClassPickerCell];
+    [SettingsArray addObject:OptionalSubjectString];
     
 }
 
@@ -66,14 +71,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.row == 0) {
+    if ([[SettingsArray objectAtIndex:indexPath.row] isEqualToString:ClassPickerCell]) {
         ClassPicker *newView = [self.storyboard instantiateViewControllerWithIdentifier:@"ClassPickerView"];
-    
+        newView.navigationBarTitle = [SettingsArray objectAtIndex:indexPath.row];
         [self.navigationController pushViewController:newView animated:YES];
     }
-    if (indexPath.row == 1) {
+    if ([[SettingsArray objectAtIndex:indexPath.row]  isEqualToString: OptionalSubjectString]) {
         OptionalSubject *newView = [self.storyboard instantiateViewControllerWithIdentifier:@"OptionalSubjectView"];
-        
+        newView.navigationBarTitle = [SettingsArray objectAtIndex:indexPath.row];
         [self.navigationController pushViewController:newView animated:YES];
     }
 }

@@ -14,6 +14,8 @@
 @end
 
 @implementation ClassPicker
+@synthesize navigationBarTitle;
+
 
 
 - (NSString *)docsDir {
@@ -33,7 +35,7 @@
     arrayClass = [Utilities listClasses:db];
     [_ClassPicker selectRow:1 inComponent:0 animated:NO];
     
-    self.title = @"Class";
+    self.title = navigationBarTitle;
 }
 
 
@@ -74,11 +76,9 @@
 }
 
 - (void)dealloc {
-    //self.arrayClass.delegate = nil;
-    //self.ClassPicker.delegate = nil;
     [_ClassPicker release];
     
-    //[arrayClass release];
+    [arrayClass release];
     
     [super dealloc];
 }

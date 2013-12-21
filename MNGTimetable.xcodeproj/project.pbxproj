@@ -230,12 +230,9 @@
 				676F1DCD1850BA8300480022 /* FirstViewController.h */,
 				676F1DCE1850BA8300480022 /* FirstViewController.m */,
 				678DC33518638C4E00A05329 /* TableViewCells */,
-				676F1DD01850BA8300480022 /* ClassPicker.h */,
-				676F1DD11850BA8300480022 /* ClassPicker.m */,
-				67B91DBE1863A982002C91AA /* OptionalSubject.h */,
-				67B91DBF1863A982002C91AA /* OptionalSubject.m */,
 				678DC33218634FE000A05329 /* SettingsTableView.h */,
 				678DC33318634FE000A05329 /* SettingsTableView.m */,
+				67B91DC21864CC0B002C91AA /* AdditionalSettingsViews */,
 				676F1DD31850BA8300480022 /* Images.xcassets */,
 				676F1E73185103C100480022 /* Data */,
 				676F1DF01850C2B500480022 /* Calendar */,
@@ -317,6 +314,17 @@
 				678DC33E18638EB000A05329 /* OptionalSubjectCell.m */,
 			);
 			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		67B91DC21864CC0B002C91AA /* AdditionalSettingsViews */ = {
+			isa = PBXGroup;
+			children = (
+				676F1DD01850BA8300480022 /* ClassPicker.h */,
+				676F1DD11850BA8300480022 /* ClassPicker.m */,
+				67B91DBE1863A982002C91AA /* OptionalSubject.h */,
+				67B91DBF1863A982002C91AA /* OptionalSubject.m */,
+			);
+			name = AdditionalSettingsViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

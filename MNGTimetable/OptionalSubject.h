@@ -10,11 +10,13 @@
 
 @interface OptionalSubject : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
     
+    NSString *navigationBarTitle;
     UITableView *tableView;
     NSMutableArray *OptionalSubjectArray;
     
 }
 
 @property (nonatomic, retain) UITableView *tableView;
+@property (nonatomic, retain) NSString *navigationBarTitle;
 
 @end

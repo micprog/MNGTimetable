@@ -10,6 +10,8 @@
 
 @interface SettingsTableView : UITableViewController {
     
+    NSString *ClassPickerCell;
+    NSString *OptionalSubjectString;
     UITableView *tableView;
     NSMutableArray *SettingsArray;
     
