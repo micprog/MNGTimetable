@@ -56,7 +56,7 @@
 
 -(void)calendarView:(MNGCalendarView *)calendarView heightAboutToChange:(float)newHeight {
     [tableView setFrameY:newHeight+20];
-    float bottom = [[self view] frameHeight] - newHeight - 42;
+    float bottom = [[self view] frameHeight] - newHeight - 69;
     [tableView setFrameHeight:bottom];
     
 }
@@ -69,6 +69,7 @@
 
 -(void)calendarView:(MNGCalendarView *)calendarView dateSelected:(NSDate *)date {
     NSLog(@"Selected date = %@",date);
+    //change LessonNameArray, LessonRoomArray, LessonTeacherArray
     [tableView reloadData];
     
 }
@@ -114,7 +115,9 @@
     
     cell.LessonStart.text = [LessonStartArray objectAtIndex:indexPath.row];
     cell.LessonEnd.text = [LessonEndArray objectAtIndex:indexPath.row];
-    //cell is created here, here we have to change the cell style for the timetable
+    //cell.LessonName.text = [LessonNameArray objectAtIndex:indexPath.row];
+    //cell.LessonRoom.text = [LessonRoomArray objectAtIndex:indexPath.row];
+    //cell.LessonTeacher.text = [LessonTeacherArray objectAtIndex:indexPath.row];
     return cell;
 }
 
